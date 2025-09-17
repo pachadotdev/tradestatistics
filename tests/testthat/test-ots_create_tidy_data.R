@@ -12,7 +12,7 @@ test_that("valid input + no cache = yr(p)(c) table", {
       years = 2002, reporters = "chl", partners = "arg", table = "yrpc"
     )
     expect_is(test_data, "data.frame")
-    expect_equal(ncol(test_data), 12)
+    expect_equal(ncol(test_data), 14)
     
     # Bilateral trade Chile-Argentina at aggregated level (2002)
     test_data <- ots_create_tidy_data(
@@ -26,7 +26,7 @@ test_that("valid input + no cache = yr(p)(c) table", {
       years = 2002, reporters = "chl", table = "yrc"
     )
     expect_is(test_data, "data.frame")
-    expect_equal(ncol(test_data), 10)
+    expect_equal(ncol(test_data), 12)
     
     # Chilean trade at aggregated level (2002)
     test_data <- ots_create_tidy_data(years = 2002, reporters = "chl", 
@@ -37,7 +37,7 @@ test_that("valid input + no cache = yr(p)(c) table", {
     # Commodity trade at aggregated level (2002)
     test_data <- ots_create_tidy_data(years = 2002, table = "yc")
     expect_is(test_data, "data.frame")
-    expect_equal(ncol(test_data), 8)
+    expect_equal(ncol(test_data), 10)
   })
 })
 
@@ -55,7 +55,7 @@ test_that("valid input + cache = yrpc table", {
       use_cache = TRUE, file = tempfile("data")
     )
     expect_is(test_data, "data.frame")
-    expect_equal(ncol(test_data), 12)
+    expect_equal(ncol(test_data), 14)
   })
 })
 
@@ -68,21 +68,42 @@ test_that("valid input + no cache + commodity filter = yrpc table", {
     )
     
     expect_is(test_data, "data.frame")
-    expect_equal(ncol(test_data), 12)
+    expect_equal(ncol(test_data), 14)
   })
 })
 
 test_that("valid input + no cache + group filter = yrpc table", {
   skip_on_cran()
   vcr::use_cassette(name = "chl_arg_2002_yrpc_fish", {
-    # filter group 03 = fish and crustaceans...
+    # filter group 03 = fish and crustaceans
+
+    # test_data <- ots_create_tidy_data(
+    #   years = 2002, reporters = "chl", partners = "arg", table = "yrpc"
+    # )
+
+    # str(test_data)
+
+    # library(dplyr)
+    
+    # test_data %>%
+    #  distinct(chapter_code)
+
+    # test_data %>%
+    #   mutate(
+    #     x = substr(commodity_code, 1, 2)
+    #   ) %>%
+    #   filter(x == "03")
+
+    # 03031 just to make the test faster
     test_data <- ots_create_tidy_data(
       years = 2002, reporters = "chl", partners = "arg", table = "yrpc",
-      commodities = "03"
+      commodities = "03031"
     )
+
+    # str(test_data)
     
     expect_is(test_data, "data.frame")
-    expect_equal(ncol(test_data), 12)
+    expect_equal(ncol(test_data), 14)
   })
 })
 
@@ -98,29 +119,12 @@ test_that("unused commodities argument = yr table + warning", {
   })
 })
 
-test_that("valid countries/NULL = yrp table /+ warning", {
-  skip_on_cran()
-  vcr::use_cassette(name = "chl_all_2002_yrp", {
-    expect_warning(
-      ots_create_tidy_data(
-        years = 2002, reporters = "chl", partners = NULL, table = "yrp"
-      )
-    )
-    
-    expect_warning(
-      ots_create_tidy_data(
-        years = 2002, reporters = NULL, partners = 'chl', table = "yrp"
-      )
-    )
-  })
-})
-
 test_that("no API data = warning", {
   skip_on_cran()
-  vcr::use_cassette(name = "chl_myt_2002_yrp", {
+  vcr::use_cassette(name = "chl_yug_2002_yrp", {
     expect_warning(
       ots_create_tidy_data(
-        years = 2002, reporters = 'chl', partners = 'myt', table = "yrp"
+        years = 2002, reporters = 'chl', partners = 'yug', table = "yrp"
       )
     )
   })

@@ -48,8 +48,10 @@ ots_country_code <- function(countryname = NULL) {
 
   if (countryname == "") {
     stop("The input results in an empty string after removing multiple spaces and special symbols. Please check the spelling or explore the countries table provided within this package.")
+  } else if (countryname == "all" | countryname == "ALL") {
+    countrycode <- tradestatistics::ots_countries
   } else {
-    countrycode <- tradestatistics::ots_countries[grepl(countryname, tolower(country_fullname_english))]
+    countrycode <- tradestatistics::ots_countries[grepl(countryname, tolower(country_name))]
   }
   
   return(countrycode)
@@ -70,67 +72,128 @@ ots_country_code <- function(countryname = NULL) {
 #' ots_commodity_code(section = "  fish")
 #' ots_commodity_code(commodity = "Milk", section = "Dairy")
 #' @keywords functions
-ots_commodity_code <- function(commodity = NULL, section = NULL) {
-  if (is.null(commodity) & is.null(section)) {
-    stop("'commodity' and 'section' are NULL.")
+ots_commodity_code <- function(commodity = NULL, section = NULL, chapter = NULL) {
+  # For data.table variable binding warnings
+  .SD <- NULL; commodity_name <- NULL; section_name <- NULL; chapter_name <- NULL
+  if (is.null(commodity) && is.null(section) && is.null(chapter)) {
+    stop("'commodity', 'section', and 'chapter' are all NULL.")
   }
-  
-  if (!is.null(commodity) & is.null(section)) {
+
+  # Match by commodity name only
+  if (!is.null(commodity) && is.null(section) && is.null(chapter)) {
     stopifnot(is.character(commodity))
-    # stopifnot(nchar(commodity) > 0)
-    
     commodity <- tolower(iconv(commodity, to = "ASCII//TRANSLIT", sub = ""))
     commodity <- gsub("[^[:alpha:]]", "", commodity)
-
     if (commodity == "") {
       stop("The input results in an empty string after removing multiple spaces and special symbols. Please check the spelling or explore the commodities table provided within this package.")
     } else {
-      d <- tradestatistics::ots_commodities[grepl(commodity, tolower(commodity_fullname_english)), c("commodity_code", "commodity_fullname_english")]
+      d <- tradestatistics::ots_commodities[grepl(commodity, tolower(commodity_name)), .SD, .SDcols = c("commodity_code", "commodity_name", "chapter_code", "chapter_name", "section_code", "section_name")]
     }
   }
-  
-  if (is.null(commodity) & !is.null(section)) {
+
+  # Match by section name only
+  if (is.null(commodity) && !is.null(section) && is.null(chapter)) {
     stopifnot(is.character(section))
-    
     section <- tolower(iconv(section, to = "ASCII//TRANSLIT", sub = ""))
     section <- gsub("[^[:alpha:]]", "", section)
-    
     if (section == "") {
       stop("The input results in an empty string after removing multiple spaces and special symbols. Please check the spelling or explore the commodities table provided within this package.")
     } else {
-      d <- tradestatistics::ots_sections[grepl(section, tolower(section_fullname_english))]
+      d <- tradestatistics::ots_commodities[grepl(section, tolower(section_name)), .SD, .SDcols = c("commodity_code", "commodity_name", "chapter_code", "chapter_name", "section_code", "section_name")]
     }
   }
-  
-  if (!is.null(commodity) & !is.null(section)) {
+
+  # Match by both commodity and section name
+  if (!is.null(commodity) && !is.null(section) && is.null(chapter)) {
     stopifnot(is.character(commodity))
-    # stopifnot(nchar(commodity) > 0)
-    
     stopifnot(is.character(section))
-    # stopifnot(nchar(section) > 0)
-    
     commodity <- tolower(iconv(commodity, to = "ASCII//TRANSLIT", sub = ""))
     commodity <- gsub("[^[:alpha:]]", "", commodity)
-    
     section <- tolower(iconv(section, to = "ASCII//TRANSLIT", sub = ""))
     section <- gsub("[^[:alpha:]]", "", section)
-
-    if (commodity == "" | section == "") {
+    if (commodity == "" || section == "") {
       stop("The input results in an empty string after removing multiple spaces and special symbols. Please check the spelling or explore the commodities table provided within this package.")
     } else {
-      # d <- tradestatistics::ots_commodities[
-      #         grepl(commodity, tolower(commodity_fullname_english)) &
-      #         grepl(section, tolower(section_fullname_english))]
-
-      d <- merge(
-        tradestatistics::ots_commodities[
-          grepl(commodity, tolower(commodity_fullname_english))],
-        tradestatistics::ots_sections[
-          grepl(section, tolower(section_fullname_english))],
-        by = "section_code"
-      )
+      d <- tradestatistics::ots_commodities[
+        grepl(commodity, tolower(commodity_name)) &
+        grepl(section, tolower(section_name)),
+        .SD, .SDcols = c("commodity_code", "commodity_name", "chapter_code", "chapter_name", "section_code", "section_name")
+      ]
     }
   }
-  
+
+  # Match by chapter name only
+  if (is.null(commodity) && is.null(section) && !is.null(chapter)) {
+    stopifnot(is.character(chapter))
+    chapter <- tolower(iconv(chapter, to = "ASCII//TRANSLIT", sub = ""))
+    chapter <- gsub("[^[:alpha:]]", "", chapter)
+    if (chapter == "") {
+      stop("The input results in an empty string after removing multiple spaces and special symbols. Please check the spelling or explore the commodities table provided within this package.")
+    } else {
+      d <- tradestatistics::ots_commodities[grepl(chapter, tolower(chapter_name)), .SD, .SDcols = c("commodity_code", "commodity_name", "chapter_code", "chapter_name", "section_code", "section_name")]
+    }
+  }
+
+  # Match by commodity and chapter
+  if (!is.null(commodity) && is.null(section) && !is.null(chapter)) {
+    stopifnot(is.character(commodity))
+    stopifnot(is.character(chapter))
+    commodity <- tolower(iconv(commodity, to = "ASCII//TRANSLIT", sub = ""))
+    commodity <- gsub("[^[:alpha:]]", "", commodity)
+    chapter <- tolower(iconv(chapter, to = "ASCII//TRANSLIT", sub = ""))
+    chapter <- gsub("[^[:alpha:]]", "", chapter)
+    if (commodity == "" || chapter == "") {
+      stop("The input results in an empty string after removing multiple spaces and special symbols. Please check the spelling or explore the commodities table provided within this package.")
+    } else {
+      d <- tradestatistics::ots_commodities[
+        grepl(commodity, tolower(commodity_name)) &
+        grepl(chapter, tolower(chapter_name)),
+        .SD, .SDcols = c("commodity_code", "commodity_name", "chapter_code", "chapter_name", "section_code", "section_name")
+      ]
+    }
+  }
+
+  # Match by section and chapter
+  if (is.null(commodity) && !is.null(section) && !is.null(chapter)) {
+    stopifnot(is.character(section))
+    stopifnot(is.character(chapter))
+    section <- tolower(iconv(section, to = "ASCII//TRANSLIT", sub = ""))
+    section <- gsub("[^[:alpha:]]", "", section)
+    chapter <- tolower(iconv(chapter, to = "ASCII//TRANSLIT", sub = ""))
+    chapter <- gsub("[^[:alpha:]]", "", chapter)
+    if (section == "" || chapter == "") {
+      stop("The input results in an empty string after removing multiple spaces and special symbols. Please check the spelling or explore the commodities table provided within this package.")
+    } else {
+      d <- tradestatistics::ots_commodities[
+        grepl(section, tolower(section_name)) &
+        grepl(chapter, tolower(chapter_name)),
+        .SD, .SDcols = c("commodity_code", "commodity_name", "chapter_code", "chapter_name", "section_code", "section_name")
+      ]
+    }
+  }
+
+  # Match by commodity, section, and chapter
+  if (!is.null(commodity) && !is.null(section) && !is.null(chapter)) {
+    stopifnot(is.character(commodity))
+    stopifnot(is.character(section))
+    stopifnot(is.character(chapter))
+    commodity <- tolower(iconv(commodity, to = "ASCII//TRANSLIT", sub = ""))
+    commodity <- gsub("[^[:alpha:]]", "", commodity)
+    section <- tolower(iconv(section, to = "ASCII//TRANSLIT", sub = ""))
+    section <- gsub("[^[:alpha:]]", "", section)
+    chapter <- tolower(iconv(chapter, to = "ASCII//TRANSLIT", sub = ""))
+    chapter <- gsub("[^[:alpha:]]", "", chapter)
+    if (commodity == "" || section == "" || chapter == "") {
+      stop("The input results in an empty string after removing multiple spaces and special symbols. Please check the spelling or explore the commodities table provided within this package.")
+    } else {
+      d <- tradestatistics::ots_commodities[
+        grepl(commodity, tolower(commodity_name)) &
+        grepl(section, tolower(section_name)) &
+        grepl(chapter, tolower(chapter_name)),
+        .SD, .SDcols = c("commodity_code", "commodity_name", "chapter_code", "chapter_name", "section_code", "section_name")
+      ]
+    }
+  }
+
   return(d)
 }

@@ -14,14 +14,21 @@ test_that("ots_gdp_deflator_adjustment adjusts the data for yrpc", {
 
     test_data_adjusted_same <- ots_gdp_deflator_adjustment(test_data, reference_year = 2004)
     
+    # dim(test_data_adjusted_backwards)
+    # dim(test_data_adjusted_forwards)
+    # dim(test_data_adjusted_same)
+
     expect_is(test_data_adjusted_backwards, "data.frame")
-    expect_equal(ncol(test_data_adjusted_backwards), 14)
+    expect_equal(ncol(test_data_adjusted_backwards), 16)
+    expect_lt(unique(test_data_adjusted_backwards$gdp_deflator), 1)
 
     expect_is(test_data_adjusted_forwards, "data.frame")
-    expect_equal(ncol(test_data_adjusted_forwards), 14)
+    expect_equal(ncol(test_data_adjusted_forwards), 16)
+    expect_gt(unique(test_data_adjusted_forwards$gdp_deflator), 1)
     
     expect_is(test_data_adjusted_same, "data.frame")
-    expect_equal(ncol(test_data_adjusted_same), 14)
+    expect_equal(ncol(test_data_adjusted_same), 16)
+    expect_equal(unique(test_data_adjusted_same$gdp_deflator), 1)
   })
 })
 

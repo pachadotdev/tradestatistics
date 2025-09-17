@@ -15,7 +15,7 @@ ots_read_from_api <- function(year = NULL,
                               max_attempts = 5) {
   stopifnot(max_attempts > 0)
 
-  if (any(table %in% c("countries", "commodities", "commodities_short", "sections", "sections_colors", "tables", "distances"))) {
+  if (any(table %in% c("countries", "commodities", "commodities_short", "sections", "tables", "distances"))) {
     message("The requested table is included within the package.")
     return(TRUE)
   }
@@ -31,7 +31,8 @@ ots_read_from_api <- function(year = NULL,
     "yc" = sprintf("yc?y=%s&c=%s", year, commodity_code)
   )
 
-  base_url <- "https://api.tradestatistics.io/"
+  base_url <- "http://127.0.0.1:4949/"
+  # base_url <- "https://api.tradestatistics.io/"
   
   resp <- HttpClient$new(url = base_url)
   resp <- resp$get(url)

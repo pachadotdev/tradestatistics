@@ -5,9 +5,9 @@ test_that("ots_country_code works properly for single matching", {
   test_country_2 <- ots_country_code("CHILE")
   test_country_3 <- ots_country_code("Chil")
 
-  expect_output(str(test_country_1), "chl")
-  expect_output(str(test_country_2), "chl")
-  expect_output(str(test_country_3), "chl")
+  expect_output(str(test_country_1), "CHL")
+  expect_output(str(test_country_2), "CHL")
+  expect_output(str(test_country_3), "CHL")
 })
 
 test_that("ots_country_code works properly for multiple matching", {

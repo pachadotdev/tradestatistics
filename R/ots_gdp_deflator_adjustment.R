@@ -35,8 +35,9 @@ ots_gdp_deflator_adjustment <- function(trade_data = NULL, reference_year = NULL
   ots_gdp_deflator_min_year <- min(tradestatistics::ots_gdp_deflator$year_from)
   ots_gdp_deflator_max_year <- max(tradestatistics::ots_gdp_deflator$year_from)
 
-  if (!is.numeric(reference_year) |
-    !(reference_year >= ots_gdp_deflator_min_year &
+  if (
+    !is.numeric(reference_year) ||
+    !(reference_year >= ots_gdp_deflator_min_year &&
       reference_year <= ots_gdp_deflator_max_year)) {
     stop(sprintf("The reference year must be numeric and contained within ots_gdp_deflator years range that is %s-%s.",
         ots_gdp_deflator_min_year,
@@ -53,14 +54,14 @@ ots_gdp_deflator_adjustment <- function(trade_data = NULL, reference_year = NULL
     function(year) {
       if (year < reference_year) {
         tradestatistics::ots_gdp_deflator[year_to <= reference_year &
-          year_to > year & country_iso == "wld",
+          year_to > year & country_iso == "ALL",
           .(gdp_deflator = last(cumprod(gdp_deflator)))][,
           `:=`(year = ..year, conversion_year = ..reference_year)][,
           .(year, conversion_year, gdp_deflator)]
       } else if (year > reference_year) {
         tradestatistics::ots_gdp_deflator[year_from >= reference_year &
           year_from < year &
-          country_iso == "wld",
+          country_iso == "ALL",
           .(gdp_deflator = 1/last(cumprod(gdp_deflator)))][,
           `:=`(year = ..year, conversion_year = ..reference_year)][,
           .(year, conversion_year, gdp_deflator)]

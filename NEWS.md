@@ -1,3 +1,14 @@
+# version 6.0
+
+* Expands the data to 2023 but now it starts from 1988 (the year when the Harmonized
+  System was first implemented). The previous version covered 1980-2021.
+* Uses the most recent HS revision (HS2022) covering over 8,000 products.
+* I converted all the data from the original SITC/HS reported revisions to HS2022.
+* The new UN Comtrade Plus includes HS codes in an "incremental" way. The data is 
+  reported and when some countries report in HS20xx after 20xx they still use the previous revisions to include specific products not present in the revision they declare (e.g., the HS code for blood transfusion products is not in the HS17 but the code is inherited from HS12).
+* I changed the API to minimize the need for joins, therefore the data
+  downloading is much faster. The downside to this is that the data now comes with extra columns by default (chapter and section name/code), which you can ignore or drop if you do not need them.
+
 # version 5.0
 
 * Expands data to 1980-2021 (previously it covered 2002-2020).

@@ -1,117 +1,58 @@
 http_interactions:
 - request:
-    method: get
-    uri: https://api.tradestatistics.io/yr?y=2002&r=chl
-    body:
-      encoding: ''
-      string: ''
-    headers:
-      User-Agent: libcurl/7.81.0 r-curl/5.0.2 crul/1.4.0
-      Accept-Encoding: gzip, deflate
-      Accept: application/json, text/xml, application/xml, */*
+    method: GET
+    uri: http://127.0.0.1:4949/yr?y=2002&r=CHL
   response:
-    status:
-      status_code: '200'
-      message: OK
-      explanation: Request fulfilled, document follows
+    status: 200
     headers:
       status: HTTP/1.1 200 OK
-      server: nginx/1.18.0 (Ubuntu)
-      date: Thu, 22 Aug 2024 20:41:12 GMT
+      date: Wed, 17 Sep 2025 03:41:30 GMT
       content-type: application/json
-      transfer-encoding: chunked
-      connection: keep-alive
       content-encoding: gzip
+      transfer-encoding: chunked
     body:
-      encoding: ''
-      file: no
-      string: '[{"year":2002,"reporter_iso":"chl","trade_value_usd_imp":4852991863,"trade_value_usd_exp":6209403846}]'
-  recorded_at: 2024-08-22 20:41:13 GMT
-  recorded_with: vcr/1.2.2, webmockr/0.9.0
+      string: '[{"year":2002,"reporter_iso":"CHL","trade_value_usd_imp":26271754903.03,"trade_value_usd_exp":16522404643}]'
+  recorded_at: 2025-09-17 03:41:30
 - request:
-    method: get
-    uri: https://api.tradestatistics.io/yr?y=2002&r=arg
-    body:
-      encoding: ''
-      string: ''
-    headers:
-      User-Agent: libcurl/7.81.0 r-curl/5.0.2 crul/1.4.0
-      Accept-Encoding: gzip, deflate
-      Accept: application/json, text/xml, application/xml, */*
+    method: GET
+    uri: http://127.0.0.1:4949/yr?y=2002&r=ARG
   response:
-    status:
-      status_code: '200'
-      message: OK
-      explanation: Request fulfilled, document follows
+    status: 200
     headers:
       status: HTTP/1.1 200 OK
-      server: nginx/1.18.0 (Ubuntu)
-      date: Thu, 22 Aug 2024 20:41:12 GMT
+      date: Wed, 17 Sep 2025 03:41:30 GMT
       content-type: application/json
-      transfer-encoding: chunked
-      connection: keep-alive
       content-encoding: gzip
+      transfer-encoding: chunked
     body:
-      encoding: ''
-      file: no
-      string: '[{"year":2002,"reporter_iso":"arg","trade_value_usd_imp":4961344697,"trade_value_usd_exp":8520263167}]'
-  recorded_at: 2024-08-22 20:41:13 GMT
-  recorded_with: vcr/1.2.2, webmockr/0.9.0
+      string: '[{"year":2002,"reporter_iso":"ARG","trade_value_usd_imp":48701963927.16,"trade_value_usd_exp":25346912330}]'
+  recorded_at: 2025-09-17 03:41:30
 - request:
-    method: get
-    uri: https://api.tradestatistics.io/yrp?y=2002&r=mex&p=usa
-    body:
-      encoding: ''
-      string: ''
-    headers:
-      User-Agent: libcurl/7.81.0 r-curl/5.0.2 crul/1.4.0
-      Accept-Encoding: gzip, deflate
-      Accept: application/json, text/xml, application/xml, */*
+    method: GET
+    uri: http://127.0.0.1:4949/yrp?y=2002&r=MEX&p=USA
   response:
-    status:
-      status_code: '200'
-      message: OK
-      explanation: Request fulfilled, document follows
+    status: 200
     headers:
       status: HTTP/1.1 200 OK
-      server: nginx/1.18.0 (Ubuntu)
-      date: Thu, 22 Aug 2024 20:41:13 GMT
+      date: Wed, 17 Sep 2025 03:41:30 GMT
       content-type: application/json
-      transfer-encoding: chunked
-      connection: keep-alive
       content-encoding: gzip
+      transfer-encoding: chunked
     body:
-      encoding: ''
-      file: no
-      string: '[{"year":2002,"reporter_iso":"mex","partner_iso":"usa","trade_value_usd_imp":103352303539,"trade_value_usd_exp":137489947084}]'
-  recorded_at: 2024-08-22 20:41:13 GMT
-  recorded_with: vcr/1.2.2, webmockr/0.9.0
+      string: '[{"year":2002,"reporter_iso":"MEX","partner_iso":"USA","trade_value_usd_imp":136025055674,"trade_value_usd_exp":137963057176}]'
+  recorded_at: 2025-09-17 03:41:30
 - request:
-    method: get
-    uri: https://api.tradestatistics.io/yrp?y=2002&r=mex&p=can
-    body:
-      encoding: ''
-      string: ''
-    headers:
-      User-Agent: libcurl/7.81.0 r-curl/5.0.2 crul/1.4.0
-      Accept-Encoding: gzip, deflate
-      Accept: application/json, text/xml, application/xml, */*
+    method: GET
+    uri: http://127.0.0.1:4949/yrp?y=2002&r=MEX&p=CAN
   response:
-    status:
-      status_code: '200'
-      message: OK
-      explanation: Request fulfilled, document follows
+    status: 200
     headers:
       status: HTTP/1.1 200 OK
-      server: nginx/1.18.0 (Ubuntu)
-      date: Thu, 22 Aug 2024 20:41:13 GMT
+      date: Wed, 17 Sep 2025 03:41:30 GMT
       content-type: application/json
-      transfer-encoding: chunked
-      connection: keep-alive
       content-encoding: gzip
+      transfer-encoding: chunked
     body:
-      encoding: ''
-      file: no
-      string: '[{"year":2002,"reporter_iso":"mex","partner_iso":"can","trade_value_usd_imp":3127702740,"trade_value_usd_exp":2580061542}]'
-  recorded_at: 2024-08-22 20:41:13 GMT
-  recorded_with: vcr/1.2.2, webmockr/0.9.0
+      string: '[{"year":2002,"reporter_iso":"MEX","partner_iso":"CAN","trade_value_usd_imp":0,"trade_value_usd_exp":3010074713}]'
+  recorded_at: 2025-09-17 03:41:30
+recorded_with: VCR-vcr/2.0.0

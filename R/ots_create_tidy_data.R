@@ -11,6 +11,7 @@
 #' @param commodities HS commodity codes (e.g. \code{"0101"}, \code{"01"} or search
 #' matches for \code{"apple"})
 #' to filter commodities. Default set to \code{"all"}.
+#' @param chapters HS chapter codes (e.g. \code{"01"}). Default set to \code{"all"}.
 #' @param sections HS section codes (e.g. \code{"01"}). Default set to \code{"all"}.
 #' @param table Character string to select the table to obtain the data.
 #' Default set to \code{yr} (Year - Reporter).
@@ -51,6 +52,7 @@ ots_create_tidy_data <- function(years = 2020,
                                  reporters = "all",
                                  partners = "all",
                                  commodities = "all",
+                                 chapters = "all",
                                  sections = "all",
                                  table = "yr",
                                  max_attempts = 5,
@@ -63,6 +65,10 @@ ots_create_tidy_data <- function(years = 2020,
   if (!any(c(is.null(file), is.character(file)))) {
     stop("file must be NULL or character.")
   }
+
+  # convert reporter/partner to uppercase
+  reporters <- toupper(reporters)
+  partners <- toupper(partners)
   
   ots_cache(
     use_cache = use_cache,
@@ -70,8 +76,9 @@ ots_create_tidy_data <- function(years = 2020,
     years = years,
     reporters = reporters,
     partners = partners,
-    commodities = commodities,
-    sections = sections,
+  commodities = commodities,
+  chapters = chapters,
+  sections = sections,
     table = table,
     max_attempts = max_attempts
   )
@@ -85,41 +92,48 @@ ots_create_tidy_data_unmemoised <- function(years = 2018,
                                             reporters = "usa",
                                             partners = "all",
                                             commodities = "all",
+                                            chapters = "all",
                                             sections = "all",
                                             table = "yr",
                                             max_attempts = 5) {
+  # silence data.table no visible binding notes
+  country_name <- NULL; country_iso <- NULL; reporter_name <- NULL; partner_name <- NULL
+  commodity_code <- NULL; commodity_name <- NULL; section_name <- NULL; section_code <- NULL
+  chapter_name <- NULL; chapter_code <- NULL; section_color <- NULL
+
   # Check tables ----
   if (!table %in% tradestatistics::ots_tables$table) {
     stop("The requested table does not exist. Please check the spelling or explore the 'ots_table' table provided within this package.")
   }
 
   # Check years ----
-  year_depending_queries <- grep("^reporters|^y|^rtas|^tariffs",
+  year_depending_queries <- grep("^reporters|^y|^rtas",
     tradestatistics::ots_tables$table,
-    value = T
+    value = TRUE
   )
 
-  year_range <- try(read.csv("https://api.tradestatistics.io/year_range"))
+  year_range <- try(read.csv("http://127.0.0.1:4949/year_range"))
+  # year_range <- try(read.csv("https://api.tradestatistics.io/year_range"))
   year_range <- try(as.numeric(year_range$year))
 
-  if (all(years %in% min(year_range):max(year_range)) != TRUE &
+  if (all(years %in% min(year_range):max(year_range)) != TRUE &&
     table %in% year_depending_queries) {
     stop("Provided that the table you requested contains a 'year' field, please verify that you are requesting data contained within the years from api.tradestatistics.io/year_range.")
   }
 
   # Check reporters and partners ----
-  reporter_depending_queries <- grep("^yr|^tariffs",
+  reporter_depending_queries <- grep("^yr",
     tradestatistics::ots_tables$table,
-    value = T
+    value = TRUE
   )
   
-  partner_depending_queries <- grep("^yrp|^tariffs",
+  partner_depending_queries <- grep("^yrp",
     tradestatistics::ots_tables$table,
-    value = T
+    value = TRUE
   )
 
   if (!is.null(reporters)) {
-    if (!all(reporters %in% tradestatistics::ots_countries$country_iso) == TRUE & table %in% reporter_depending_queries) {
+  if (!all(reporters %in% tradestatistics::ots_countries$country_iso) == TRUE && table %in% reporter_depending_queries) {
       reporters_iso <- reporters[reporters %in% tradestatistics::ots_countries$country_iso]
       reporters_no_iso <- reporters[!reporters %in% tradestatistics::ots_countries$country_iso]
       
@@ -148,7 +162,10 @@ ots_create_tidy_data_unmemoised <- function(years = 2018,
   }
 
   if (!is.null(partners)) {
-    if (!all(partners %in% tradestatistics::ots_countries$country_iso) == TRUE & table %in% partner_depending_queries) {
+    if (
+      isTRUE(!all(partners %in% tradestatistics::ots_countries$country_iso)) &&
+      table %in% partner_depending_queries
+    ) {
       partners_iso <- partners[partners %in% tradestatistics::ots_countries$country_iso]
       partners_no_iso <- partners[!partners %in% tradestatistics::ots_countries$country_iso]
 
@@ -177,91 +194,146 @@ ots_create_tidy_data_unmemoised <- function(years = 2018,
   }
 
   # Check commodity codes ----
-  commodities_depending_queries <- grep("c$|^tariffs",
+  commodities_depending_queries <- grep("c$",
     tradestatistics::ots_tables$table,
-    value = T
+    value = TRUE
   )
 
-  if (!all(as.character(commodities) %in%
-    tradestatistics::ots_commodities$commodity_code) == TRUE &
-    table %in% commodities_depending_queries) {
+  # If commodities == "all" we don't filter by commodity
+  if (!(length(commodities) == 1 && identical(commodities, "all"))) {
 
-    # commodities without match (wm)
-    commodities_wm <- commodities[!commodities %in%
-      tradestatistics::ots_commodities$commodity_code]
+    # normalize
+    commodities <- as.character(commodities)
 
-    # commodity name match (pmm)
-    pnm <- lapply(
-      seq_along(commodities_wm),
-      function(x) { tradestatistics::ots_commodity_code(commodity = commodities_wm[x]) }
-    )
-    pnm <- rbindlist(pnm)
+    # Expand numeric HS prefixes of any length (e.g. "03", "0301") into full commodity codes
+    is_numeric_token <- grepl('^[0-9]+$', commodities)
+    if (any(is_numeric_token)) {
+      prefixes <- unique(commodities[is_numeric_token])
+      expanded <- unlist(lapply(prefixes, function(p) {
+        tradestatistics::ots_commodities$commodity_code[startsWith(tradestatistics::ots_commodities$commodity_code, p)]
+      }))
+      # remove the numeric tokens and add expanded codes (keep tokens that didn't match anything for later error handling)
+      commodities <- unique(c(commodities[!is_numeric_token], expanded))
+    }
 
-    # group name match (gnm)
-    gnm <- lapply(
-      seq_along(commodities_wm),
-      function(x) { tradestatistics::ots_commodity_code(group = commodities_wm[x]) }
-    )
-    gnm <- rbindlist(gnm)
+    if (
+      isTRUE(!all(as.character(commodities) %in% tradestatistics::ots_commodities$commodity_code)) &&
+      table %in% commodities_depending_queries
+    ) {
 
-    commodities_wm <- rbind(pnm, gnm, fill = TRUE)
-    commodities_wm <- unique(commodities_wm[nchar(commodity_code) == 4, .(commodity_code)])
-    commodities_wm <- as.vector(unlist(commodities_wm))
+      # commodities without match (wm) - these are likely textual searches (names, chapters, sections)
+      commodities_wm <- commodities[!commodities %in%
+        tradestatistics::ots_commodities$commodity_code]
 
-    commodities <- c(commodities[commodities %in%
-      tradestatistics::ots_commodities$commodity_code], commodities_wm)
-    
-    if(length(commodities) == 0) {
-      commodities <- NA
+      # commodity name match (pmm)
+      pnm <- lapply(
+        seq_along(commodities_wm),
+        function(x) { tradestatistics::ots_commodity_code(commodity = commodities_wm[x]) }
+      )
+      pnm <- rbindlist(pnm)
+
+      # chapter name match (cnm)
+      cnm <- lapply(
+        seq_along(commodities_wm),
+        function(x) { tradestatistics::ots_commodity_code(chapter = commodities_wm[x]) }
+      )
+      cnm <- rbindlist(cnm)
+
+      # section name match (snm)
+      snm <- lapply(
+        seq_along(commodities_wm),
+        function(x) { tradestatistics::ots_commodity_code(section = commodities_wm[x]) }
+      )
+      snm <- rbindlist(snm)
+
+      commodities_wm <- rbind(pnm, cnm, snm, fill = TRUE)
+      commodities_wm <- unique(commodities_wm[nchar(commodity_code) == 4, .(commodity_code)])
+      commodities_wm <- as.vector(unlist(commodities_wm))
+
+      commodities <- c(commodities[commodities %in%
+        tradestatistics::ots_commodities$commodity_code], commodities_wm)
+
+      if(length(commodities) == 0) {
+        commodities <- NA
+      }
+    }
+
+    if (!all(as.character(commodities) %in%
+      tradestatistics::ots_commodities$commodity_code) &&
+      table %in% commodities_depending_queries) {
+      stop("The requested commodities do not exist. Please check ots_commodities.")
     }
   }
+  # If chapters or sections provided, expand them into commodity codes and add to commodities
+  # chapters: accept either codes (e.g. "03") or names
+  if (!(length(chapters) == 1 && identical(chapters, "all"))) {
+    chapters <- as.character(chapters)
+    ch_codes <- c()
+    for (ch in chapters) {
+      if (grepl('^[0-9]+$', ch)) {
+        # numeric chapter code
+        ch_codes <- c(ch_codes, tradestatistics::ots_commodities$commodity_code[substr(tradestatistics::ots_commodities$chapter_code,1,nchar(ch)) == ch])
+      } else {
+        # name match
+        tmp <- tradestatistics::ots_commodities[grepl(tolower(ch), tolower(chapter_name))]
+        ch_codes <- c(ch_codes, tmp$commodity_code)
+      }
+    }
+    if (length(ch_codes) > 0) commodities <- unique(c(as.character(commodities), ch_codes))
+  }
 
-  if (!all(as.character(commodities) %in%
-    tradestatistics::ots_commodities$commodity_code == TRUE) &
-    table %in% commodities_depending_queries) {
-    stop("The requested commodities do not exist. Please check ots_commodities.")
+  if (!(length(sections) == 1 && identical(sections, "all"))) {
+    sections <- as.character(sections)
+    sec_codes <- c()
+    for (s in sections) {
+      if (grepl('^[0-9]+$', s)) {
+        # numeric section code
+        sec_codes <- c(sec_codes, tradestatistics::ots_commodities$commodity_code[substr(tradestatistics::ots_commodities$section_code,1,nchar(s)) == s])
+      } else {
+        # name match
+        tmp <- tradestatistics::ots_commodities[grepl(tolower(s), tolower(section_name))]
+        sec_codes <- c(sec_codes, tmp$commodity_code)
+      }
+    }
+    if (length(sec_codes) > 0) commodities <- unique(c(as.character(commodities), sec_codes))
   }
   
   # Check section codes -----------------------------------------------------
   sections <- sort(as.character(sections))
-  
-  if (!all(sections %in% c(tradestatistics::ots_sections$section_code, "all") == TRUE) &
+  if (!all(sections %in% c(unique(tradestatistics::ots_commodities$section_code), "all") == TRUE) &&
       table %in% commodities_depending_queries) {
     for (i in seq_along(sections)) {
       if (sections[i] != "all") {
         sections[i] <- as.integer(substr(sections, 1, 3))
       }
-      if (nchar(sections[i]) != 2 & sections[i] != "999") {
+  if (nchar(sections[i]) != 2 && sections[i] != "999") {
         sections[i] <- paste0("0", sections[i])
       }
     }
-    
     for (i in seq_along(sections)) {
-      sections[i] <- if (!sections[i] %in% tradestatistics::ots_sections$section_code) {
+      sections[i] <- if (!sections[i] %in% tradestatistics::ots_commodities$section_code) {
         NA
       } else {
         sections[i]
       }
     }
-    
     sections <- sections[!is.na(sections)]
     if(length(sections) == 0) {
       sections <- NA
     }
   }
-  
-  if (!all(sections %in% c(tradestatistics::ots_sections$section_code, "all") == TRUE) &
+  if (!all(sections %in% c(unique(tradestatistics::ots_commodities$section_code), "all") == TRUE) &&
     table %in% commodities_depending_queries) {
-    stop("The requested sections do not exist. Please check ots_sections.")
+    stop("The requested sections do not exist. Please check section_code in ots_commodities.")
   }
   
   # Check optional parameters ----
-  if (!is.numeric(max_attempts) | max_attempts <= 0) {
+  if (!is.numeric(max_attempts) || max_attempts <= 0) {
     stop("max_attempts must be a positive integer.")
   }
 
   # Read from API ----
-  if (!table %in% commodities_depending_queries & any(commodities != "all") == TRUE) {
+  if (!table %in% commodities_depending_queries && any(commodities != "all") == TRUE) {
     commodities <- "all"
     warning("The commodities argument will be ignored provided that you requested a table without commodity_code field.")
   }
@@ -276,17 +348,50 @@ ots_create_tidy_data_unmemoised <- function(years = 2018,
     warning("No partner was specified, therefore all available partners will be returned.")
   }
 
-  condensed_parameters <- expand.grid(
+  # Build API parameter grid. When a specific commodity code is requested,
+  # include the commodity's section_code (from ots_commodities) in the API call
+  base_grid <- expand.grid(
     year = years,
     reporter = reporters,
     partner = partners,
-    commodity = commodities,
-    section = "all",
     stringsAsFactors = FALSE
   )
 
+  if (length(commodities) == 1 && identical(commodities, "all")) {
+    condensed_parameters <- cbind(base_grid, commodity = "all", section = "all", stringsAsFactors = FALSE)
+  } else {
+    # ensure commodities vector
+    commodities <- as.character(commodities)
+    # map each commodity to its section code using ots_commodities
+    commodity_sections <- sapply(commodities, function(cc) {
+      idx <- which(tradestatistics::ots_commodities$commodity_code == cc)
+      if (length(idx) >= 1) {
+        tradestatistics::ots_commodities$section_code[idx[1]]
+      } else {
+        # fallback to 'all' if we can't find a section (shouldn't happen after validation)
+        "all"
+      }
+    }, USE.NAMES = FALSE)
+
+    # create one block per commodity with its corresponding section
+    blocks <- lapply(seq_along(commodities), function(i) {
+      cbind(base_grid, commodity = commodities[i], section = commodity_sections[i], stringsAsFactors = FALSE)
+    })
+    condensed_parameters <- do.call(rbind, blocks)
+  }
+
+  # Safely determine number of parameter blocks. If this is NA/0 or not a
+  # positive integer it means the requested commodities/expansions produced
+  # no valid API calls (e.g. non-existing commodity codes). In that case
+  # surface a clear error instead of calling seq_len on an invalid value and
+  # producing a spurious warning that pollutes tests.
+  n_params <- nrow(condensed_parameters)
+  if (is.null(n_params) || length(n_params) != 1L || is.na(n_params) || n_params <= 0L) {
+    stop("The requested commodities do not exist. Please check ots_commodities.")
+  }
+
   data <- lapply(
-    seq_len(nrow(condensed_parameters)),
+    seq_len(n_params),
     function(x) {
       ots_read_from_api(
         table = table,
@@ -301,56 +406,98 @@ ots_create_tidy_data_unmemoised <- function(years = 2018,
   )
   data <- rbindlist(data, fill = TRUE)
   
-  # no data in API message
-  if (any("observation" %in% names(data))) {
+  # If the API returned no trade columns (e.g. no rows for the requested
+  # reporter/partner/year) treat this as no data and warn the user. Many API
+  # endpoints that return zero results do not include the usual
+  # 'trade_value_*' columns.
+  if (!any(grepl('^trade_value_', names(data)))) {
     warning("The parameters you specified resulted in API calls returning 0 rows.")
     return(data)
+  }
+
+  # no data in API message
+  if ("observation" %in% names(data)) {
+    # if observation is the only column returned, treat as no data
+    non_obs_cols <- setdiff(names(data), "observation")
+    if (length(non_obs_cols) == 0L) {
+      warning("The parameters you specified resulted in API calls returning 0 rows.")
+      return(data)
+    }
+    # if all non-observation columns are NA, treat as no data
+    all_na_non_obs <- TRUE
+    for (col in non_obs_cols) {
+      if (any(!is.na(data[[col]]))) {
+        all_na_non_obs <- FALSE
+        break
+      }
+    }
+    if (all_na_non_obs) {
+      warning("The parameters you specified resulted in API calls returning 0 rows.")
+      return(data)
+    }
+    # otherwise drop observation if it's all NA and continue
+    if (all(is.na(data$observation))) {
+      data[, observation := NULL]
+    }
   }
 
   # Add attributes based on codes, etc (and join years, if applicable) ------
 
   # include countries data
   if (table %in% reporter_depending_queries) {
-    data <- merge(data, tradestatistics::ots_countries[, .(country_iso, country_name_english)],
+    data <- merge(data, tradestatistics::ots_countries[, .(country_iso, country_name)],
                   all.x = TRUE, all.y = FALSE,
                   by.x = "reporter_iso", by.y = "country_iso",
                   allow.cartesian = TRUE)
-    data <- setnames(data, "country_name_english", "reporter_name")
+    data <- setnames(data, "country_name", "reporter_name")
   }
 
   if (table %in% partner_depending_queries) {
-    data <- merge(data, tradestatistics::ots_countries[, .(country_iso, country_name_english)],
+    data <- merge(data, tradestatistics::ots_countries[, .(country_iso, country_name)],
                   all.x = TRUE, all.y = FALSE,
                   by.x = "partner_iso", by.y = "country_iso",
                   allow.cartesian = TRUE)
-    data <- setnames(data, "country_name_english", "partner_name")
+    data <- setnames(data, "country_name", "partner_name")
   }
   
-  # include commodities data
-  if (table %in% commodities_depending_queries) {
-    data <- merge(data, tradestatistics::ots_commodities,
-                  all.x = TRUE, all.y = FALSE,
-                  by.x = c("commodity_code", "section_code"), by.y = c("commodity_code", "section_code"),
-                  allow.cartesian = TRUE)
+  # If commodity_code is present, ensure descriptive fields are populated.
+  # Prefer values returned by the API; otherwise fill from the package table
+  # using a straight match to avoid .x/.y merge complexities.
+  if ("commodity_code" %in% names(data)) {
+    # create an index that maps each row's commodity_code to ots_commodities
+    idx <- match(as.character(data$commodity_code), tradestatistics::ots_commodities$commodity_code)
 
-    data <- merge(data, tradestatistics::ots_sections,
-      all.x = TRUE, all.y = FALSE,
-      by.x = "section_code", by.y = "section_code",
-      allow.cartesian = TRUE
-    )
-    
-    data <- setnames(data, c("commodity_fullname_english", "section_fullname_english"), 
-                     c("commodity_name", "section_name"))
+    # helper to fill a column from ots_commodities if missing or all NA in data
+    fill_if_missing <- function(colname) {
+      if (!(colname %in% names(data))) {
+        data[[colname]] <<- tradestatistics::ots_commodities[[colname]][idx]
+      } else {
+        # if column exists but has NA in some rows, fill those rows
+        nas <- is.na(data[[colname]]) | data[[colname]] == ""
+        if (any(nas)) {
+          data[[colname]][nas] <<- tradestatistics::ots_commodities[[colname]][idx][nas]
+        }
+      }
+    }
+
+    # fill descriptive and code columns
+    fill_if_missing('commodity_name')
+    fill_if_missing('chapter_code')
+    fill_if_missing('chapter_name')
+    fill_if_missing('section_code')
+    fill_if_missing('section_name')
+    fill_if_missing('section_color')
   }
   
   columns_order <- c("year",
                      grep("^reporter_", colnames(data), value = TRUE),
                      grep("^partner_", colnames(data), value = TRUE),
                      grep("^commodity_", colnames(data), value = TRUE),
+                     grep("^chapter_", colnames(data), value = TRUE),
                      grep("^section_", colnames(data), value = TRUE),
                      grep("^trade_", colnames(data), value = TRUE),
                      grep("^country|^rta", colnames(data), value = TRUE),
-                     grep("tariff|source", colnames(data), value = TRUE)
+                     grep("source", colnames(data), value = TRUE)
   )
 
   data <- data[, ..columns_order]
