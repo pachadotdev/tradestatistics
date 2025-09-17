@@ -7,11 +7,11 @@
 \format{
 A data frame with 275 observations on the following 5 variables
 \describe{
-  \item{\code{country_iso}}{ISO-3 code of the country (e.g. "deu" means Germany)}
-  \item{\code{country_name_english}}{Country name (e.g. Germany)}
-  \item{\code{country_fullname_english}}{Country name with indications (e.g. Germany as "Germany (former Federal Republic of Germany until 1990)")}
-  \item{\code{continent_name_english}}{Continent where the country belongs to (e.g., Europe)}
-  \item{\code{continent_id}}{Numeric id of the continent where the country belongs to (e.g., 5)}
+  \item{\code{country_iso}}{ISO-3 code of the country (e.g. "GBR")}
+  \item{\code{country_name}}{Country name (e.g. United Kingdom)}
+  \item{\code{continent_id}}{Numeric id of the continent where the country belongs to (e.g., 4)}
+  \item{\code{continent_name}}{Continent where the country belongs to (e.g., Europe)}
+  \item{\code{continent_color}}{Color assigned to each continent for visualization purposes (e.g., '#8abdb6')}
 }
 }
 \source{

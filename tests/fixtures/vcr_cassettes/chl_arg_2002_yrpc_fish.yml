@@ -6,13 +6,13 @@ http_interactions:
     status: 200
     headers:
       status: HTTP/1.1 200 OK
-      date: Wed, 17 Sep 2025 03:41:29 GMT
+      date: Wed, 17 Sep 2025 11:26:30 GMT
       content-type: application/json
       content-encoding: gzip
       transfer-encoding: chunked
     body:
       string: '[{"year":2002,"reporter_iso":"CHL","partner_iso":"ARG","section_code":"01","chapter_code":"03","commodity_code":"030311","trade_value_usd_exp":1619}]'
-  recorded_at: 2025-09-17 03:41:29
+  recorded_at: 2025-09-17 11:26:30
 - request:
     method: GET
     uri: http://127.0.0.1:4949/yrpc?y=2002&r=CHL&p=ARG&c=030312
@@ -20,13 +20,13 @@ http_interactions:
     status: 200
     headers:
       status: HTTP/1.1 200 OK
-      date: Wed, 17 Sep 2025 03:41:29 GMT
+      date: Wed, 17 Sep 2025 11:26:30 GMT
       content-type: application/json
       content-encoding: gzip
       transfer-encoding: chunked
     body:
       string: '[{"year":2002,"reporter_iso":"CHL","partner_iso":"ARG","section_code":"01","chapter_code":"03","commodity_code":"030312","trade_value_usd_imp":15785,"trade_value_usd_exp":12888}]'
-  recorded_at: 2025-09-17 03:41:29
+  recorded_at: 2025-09-17 11:26:30
 - request:
     method: GET
     uri: http://127.0.0.1:4949/yrpc?y=2002&r=CHL&p=ARG&c=030313
@@ -34,13 +34,13 @@ http_interactions:
     status: 200
     headers:
       status: HTTP/1.1 200 OK
-      date: Wed, 17 Sep 2025 03:41:29 GMT
+      date: Wed, 17 Sep 2025 11:26:30 GMT
       content-type: application/json
       content-encoding: gzip
       transfer-encoding: chunked
     body:
       string: '[{"year":2002,"reporter_iso":"CHL","partner_iso":"ARG","section_code":"01","chapter_code":"03","commodity_code":"030313","trade_value_usd_imp":193216,"trade_value_usd_exp":189735}]'
-  recorded_at: 2025-09-17 03:41:29
+  recorded_at: 2025-09-17 11:26:30
 - request:
     method: GET
     uri: http://127.0.0.1:4949/yrpc?y=2002&r=CHL&p=ARG&c=030314
@@ -48,13 +48,13 @@ http_interactions:
     status: 200
     headers:
       status: HTTP/1.1 200 OK
-      date: Wed, 17 Sep 2025 03:41:30 GMT
+      date: Wed, 17 Sep 2025 11:26:30 GMT
       content-type: application/json
       content-encoding: gzip
       transfer-encoding: chunked
     body:
       string: '[{"year":2002,"reporter_iso":"CHL","partner_iso":"ARG","section_code":"01","chapter_code":"03","commodity_code":"030314","trade_value_usd_imp":15340,"trade_value_usd_exp":14944}]'
-  recorded_at: 2025-09-17 03:41:30
+  recorded_at: 2025-09-17 11:26:30
 - request:
     method: GET
     uri: http://127.0.0.1:4949/yrpc?y=2002&r=CHL&p=ARG&c=030319
@@ -62,14 +62,14 @@ http_interactions:
     status: 200
     headers:
       status: HTTP/1.1 200 OK
-      date: Wed, 17 Sep 2025 03:41:30 GMT
+      date: Wed, 17 Sep 2025 11:26:30 GMT
       content-type: application/json
       content-encoding: gzip
       transfer-encoding: chunked
     body:
       string: '[{"year":2002,"reporter_iso":"CHL","partner_iso":"ARG","commodity_code":"030319","observation":"No
         data available for these filtering parameters"}]'
-  recorded_at: 2025-09-17 03:41:30
+  recorded_at: 2025-09-17 11:26:30
 - request:
     method: GET
     uri: http://127.0.0.1:4949/yrpc?y=2002&r=CHL&p=ARG&c=030310
@@ -77,12 +77,12 @@ http_interactions:
     status: 200
     headers:
       status: HTTP/1.1 200 OK
-      date: Wed, 17 Sep 2025 03:41:30 GMT
+      date: Wed, 17 Sep 2025 11:26:30 GMT
       content-type: application/json
       content-encoding: gzip
       transfer-encoding: chunked
     body:
       string: '[{"year":2002,"reporter_iso":"CHL","partner_iso":"ARG","commodity_code":"030310","observation":"No
         data available for these filtering parameters"}]'
-  recorded_at: 2025-09-17 03:41:30
+  recorded_at: 2025-09-17 11:26:30
 recorded_with: VCR-vcr/2.0.0

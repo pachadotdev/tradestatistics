@@ -8,7 +8,7 @@
 A data frame with 1,225 observations on the following 2 variables
 \describe{
   \item{\code{commodity_code}}{HS four digits commodity code (e.g. 0101)}
-  \item{\code{commodity_fullname_english}}{HS four digits commodity names (e.g. 'Horses, asses, mules and hinnies; live')}
+  \item{\code{commodity_name}}{HS four digits commodity names (e.g. 'Horses, asses, mules and hinnies; live')}
 }
 }
 \source{

@@ -9,6 +9,7 @@ ots_create_tidy_data_memoised(
   reporters = "usa",
   partners = "all",
   commodities = "all",
+  chapters = "all",
   sections = "all",
   table = "yr",
   max_attempts = 5

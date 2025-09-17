@@ -61,10 +61,11 @@ NULL
 #' @source Open Trade Statistics
 #' @format A data frame with 275 observations on the following 5 variables
 #' \describe{
-#'   \item{\code{country_iso}}{ISO-3 code of the country (e.g. "deu" means Germany)}
-#'   \item{\code{country_name}}{Country name (e.g. Germany)}
+#'   \item{\code{country_iso}}{ISO-3 code of the country (e.g. "GBR")}
+#'   \item{\code{country_name}}{Country name (e.g. United Kingdom)}
+#'   \item{\code{continent_id}}{Numeric id of the continent where the country belongs to (e.g., 4)}
 #'   \item{\code{continent_name}}{Continent where the country belongs to (e.g., Europe)}
-#'   \item{\code{continent_id}}{Numeric id of the continent where the country belongs to (e.g., 5)}
+#'   \item{\code{continent_color}}{Color assigned to each continent for visualization purposes (e.g., '#8abdb6')}
 #' }
 NULL
 
@@ -83,7 +84,11 @@ NULL
 #'   \item{\code{commodity_code}}{HS six digits commodity code (e.g. 010110)}
 #'   \item{\code{commodity_code_short}}{HS four digits commodity code (e.g. 0101)}
 #'   \item{\code{commodity_name}}{HS six digits commodity name (e.g. 'Horses, asses, mules and hinnies; live, pure-bred breeding animals')}
-#'   \item{\code{section_code}}{HS section code (e.g. '01')}
+#'   \item{\code{chapter_code}}{HS chapter code (e.g. 01)}
+#'   \item{\code{chapter_name}}{HS chapter name (e.g. 'Animals; live')}
+#'   \item{\code{section_code}}{HS section code (e.g. 01)}
+#'   \item{\code{section_name}}{HS section name (e.g. 'Live animals; animal products')}
+#'   \item{\code{section_color}}{Color assigned to each HS section for visualization purposes (e.g. '#74c0e2')}
 #' }
 NULL
 
@@ -101,21 +106,5 @@ NULL
 #' \describe{
 #'   \item{\code{commodity_code}}{HS four digits commodity code (e.g. 0101)}
 #'   \item{\code{commodity_name}}{HS four digits commodity names (e.g. 'Horses, asses, mules and hinnies; live')}
-#' }
-NULL
-
-#' OTS Sections
-#'
-#' Official section names from the Harmonized System rev 2012 (HS12).
-#'
-#' @docType data
-#' @keywords datasets
-#' @name ots_sections
-#' @usage ots_sections
-#' @source Adapted from UN COMTRADE
-#' @format A data frame with 22 rows and 2 variables
-#' \describe{
-#'   \item{\code{section_code}}{HS section code (e.g. '01')}
-#'   \item{\code{section_name}}{HS section name (e.g. 'Live animals and animal products')}
 #' }
 NULL

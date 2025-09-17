@@ -64,6 +64,7 @@ ots_country_code <- function(countryname = NULL) {
 #' commodity codes.
 #' @param commodity A text string such as "Animals", "COPPER" or "fruits".
 #' @param section A text string such as "meat", "FISH" or "Dairy".
+#' @param chapter A text string such as "animal", "VEGETABLES" or "Wood".
 #' @return A tibble with all possible matches (no uppercase distinction)
 #' showing the commodity name and commodity code
 #' @export

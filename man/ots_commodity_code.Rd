@@ -5,12 +5,14 @@
 \title{String matching of official commodity/section names and Harmonized System (HS) codes
 according to the United Nations nomenclature}
 \usage{
-ots_commodity_code(commodity = NULL, section = NULL)
+ots_commodity_code(commodity = NULL, section = NULL, chapter = NULL)
 }
 \arguments{
 \item{commodity}{A text string such as "Animals", "COPPER" or "fruits".}
 
 \item{section}{A text string such as "meat", "FISH" or "Dairy".}
+
+\item{chapter}{A text string such as "animal", "VEGETABLES" or "Wood".}
 }
 \value{
 A tibble with all possible matches (no uppercase distinction)

@@ -264,38 +264,55 @@ ots_create_tidy_data_unmemoised <- function(years = 2018,
       stop("The requested commodities do not exist. Please check ots_commodities.")
     }
   }
-  # If chapters or sections provided, expand them into commodity codes and add to commodities
+  # If chapters or sections provided, prefer fetching the full commodity set and
+  # filtering locally when the user did not explicitly provide commodity codes.
+  # This avoids issuing one API call per commodity (very slow). If the user
+  # explicitly provided commodity codes, keep the original behaviour and expand
+  # chapters/sections into commodity codes.
+  chapter_filter <- NULL
+  section_filter <- NULL
+
   # chapters: accept either codes (e.g. "03") or names
   if (!(length(chapters) == 1 && identical(chapters, "all"))) {
     chapters <- as.character(chapters)
-    ch_codes <- c()
-    for (ch in chapters) {
-      if (grepl('^[0-9]+$', ch)) {
-        # numeric chapter code
-        ch_codes <- c(ch_codes, tradestatistics::ots_commodities$commodity_code[substr(tradestatistics::ots_commodities$chapter_code,1,nchar(ch)) == ch])
-      } else {
-        # name match
-        tmp <- tradestatistics::ots_commodities[grepl(tolower(ch), tolower(chapter_name))]
-        ch_codes <- c(ch_codes, tmp$commodity_code)
+    # if user did not provide explicit commodity codes, record chapter filter
+    # and avoid expanding into many commodity-specific API calls
+    if (length(commodities) == 1 && identical(commodities, "all")) {
+      chapter_filter <- chapters
+    } else {
+      ch_codes <- c()
+      for (ch in chapters) {
+        if (grepl('^[0-9]+$', ch)) {
+          # numeric chapter code
+          ch_codes <- c(ch_codes, tradestatistics::ots_commodities$commodity_code[substr(tradestatistics::ots_commodities$chapter_code,1,nchar(ch)) == ch])
+        } else {
+          # name match
+          tmp <- tradestatistics::ots_commodities[grepl(tolower(ch), tolower(chapter_name))]
+          ch_codes <- c(ch_codes, tmp$commodity_code)
+        }
       }
+      if (length(ch_codes) > 0) commodities <- unique(c(as.character(commodities), ch_codes))
     }
-    if (length(ch_codes) > 0) commodities <- unique(c(as.character(commodities), ch_codes))
   }
 
   if (!(length(sections) == 1 && identical(sections, "all"))) {
     sections <- as.character(sections)
-    sec_codes <- c()
-    for (s in sections) {
-      if (grepl('^[0-9]+$', s)) {
-        # numeric section code
-        sec_codes <- c(sec_codes, tradestatistics::ots_commodities$commodity_code[substr(tradestatistics::ots_commodities$section_code,1,nchar(s)) == s])
-      } else {
-        # name match
-        tmp <- tradestatistics::ots_commodities[grepl(tolower(s), tolower(section_name))]
-        sec_codes <- c(sec_codes, tmp$commodity_code)
+    if (length(commodities) == 1 && identical(commodities, "all")) {
+      section_filter <- sections
+    } else {
+      sec_codes <- c()
+      for (s in sections) {
+        if (grepl('^[0-9]+$', s)) {
+          # numeric section code
+          sec_codes <- c(sec_codes, tradestatistics::ots_commodities$commodity_code[substr(tradestatistics::ots_commodities$section_code,1,nchar(s)) == s])
+        } else {
+          # name match
+          tmp <- tradestatistics::ots_commodities[grepl(tolower(s), tolower(section_name))]
+          sec_codes <- c(sec_codes, tmp$commodity_code)
+        }
       }
+      if (length(sec_codes) > 0) commodities <- unique(c(as.character(commodities), sec_codes))
     }
-    if (length(sec_codes) > 0) commodities <- unique(c(as.character(commodities), sec_codes))
   }
   
   # Check section codes -----------------------------------------------------
@@ -358,6 +375,9 @@ ots_create_tidy_data_unmemoised <- function(years = 2018,
   )
 
   if (length(commodities) == 1 && identical(commodities, "all")) {
+    # Request all commodities from the API for the specified year/reporter/partner
+    # and apply chapter/section filters locally. This avoids issuing many
+    # per-commodity API calls and ensures consistent filtering.
     condensed_parameters <- cbind(base_grid, commodity = "all", section = "all", stringsAsFactors = FALSE)
   } else {
     # ensure commodities vector
@@ -489,6 +509,43 @@ ots_create_tidy_data_unmemoised <- function(years = 2018,
     fill_if_missing('section_color')
   }
   
+    # If we recorded chapter/section filters to avoid expanding into many API
+    # calls, apply those filters now on the assembled `data` table.
+    if (exists("chapter_filter") && !is.null(chapter_filter)) {
+      # accept numeric codes or names; normalize to two-digit chapter codes
+      chs <- as.character(unlist(chapter_filter))
+      ch_codes <- c()
+      for (ch in chs) {
+        if (grepl('^[0-9]+$', ch)) {
+          ch_codes <- c(ch_codes, sprintf("%02d", as.integer(ch)))
+        } else {
+          matches <- tradestatistics::ots_commodities[grepl(tolower(ch), tolower(chapter_name)), unique(chapter_code)]
+          ch_codes <- c(ch_codes, matches)
+        }
+      }
+      ch_codes <- unique(ch_codes)
+      # filter rows where commodity_code prefix matches chapter codes
+      data <- data[substr(as.character(commodity_code), 1, 2) %in% ch_codes]
+    }
+
+    if (exists("section_filter") && !is.null(section_filter)) {
+      secs <- as.character(unlist(section_filter))
+      sec_codes <- c()
+      for (s in secs) {
+        if (grepl('^[0-9]+$', s)) {
+          sec_codes <- c(sec_codes, sprintf("%02d", as.integer(s)))
+        } else {
+          matches <- tradestatistics::ots_commodities[grepl(tolower(s), tolower(section_name)), unique(section_code)]
+          sec_codes <- c(sec_codes, matches)
+        }
+      }
+      sec_codes <- unique(sec_codes)
+      # filter rows where commodity_code's section (first 2 or 3 digits depending) matches
+      # section_code in ots_commodities; we'll compare by matching the section_code column
+      idx <- match(as.character(data$commodity_code), tradestatistics::ots_commodities$commodity_code)
+      data <- data[tradestatistics::ots_commodities$section_code[idx] %in% sec_codes]
+    }
+
   columns_order <- c("year",
                      grep("^reporter_", colnames(data), value = TRUE),
                      grep("^partner_", colnames(data), value = TRUE),

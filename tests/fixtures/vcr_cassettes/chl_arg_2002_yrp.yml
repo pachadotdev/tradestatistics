@@ -6,11 +6,11 @@ http_interactions:
     status: 200
     headers:
       status: HTTP/1.1 200 OK
-      date: Wed, 17 Sep 2025 03:41:31 GMT
+      date: Wed, 17 Sep 2025 11:26:32 GMT
       content-type: application/json
       content-encoding: gzip
       transfer-encoding: chunked
     body:
       string: '[{"year":2002,"reporter_iso":"CHL","partner_iso":"ARG","trade_value_usd_imp":176629141,"trade_value_usd_exp":232852460}]'
-  recorded_at: 2025-09-17 03:41:31
+  recorded_at: 2025-09-17 11:26:32
 recorded_with: VCR-vcr/2.0.0

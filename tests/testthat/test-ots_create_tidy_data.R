@@ -107,6 +107,84 @@ test_that("valid input + no cache + group filter = yrpc table", {
   })
 })
 
+test_that("valid input + no cache + group filter = yrpc table", {
+  skip_on_cran()
+  vcr::use_cassette(name = "chl_arg_2002_yrpc_fish_3codes", {
+    test_data <- ots_create_tidy_data(
+      years = 2002, reporters = "chl", partners = "arg", table = "yrpc",
+      commodities = c("030311", "030312", "030319")
+    )
+    
+    expect_is(test_data, "data.frame")
+    expect_equal(ncol(test_data), 14)
+    expect_equal(nrow(test_data), 3)
+  })
+})
+
+test_that("valid input + no cache + group filter = yrpc table", {
+  skip_on_cran()
+  vcr::use_cassette(name = "chl_arg_2002_yrpc_fish_chapter", {
+    # load_all()
+
+    # library(dplyr)
+
+    # test_data_2 <- ots_create_tidy_data(
+    #   years = 2002, reporters = "chl", partners = "arg", table = "yrpc"
+    # ) %>%
+    #   filter(chapter_code == "03")
+
+    # dim(test_data_2)
+
+    test_data <- ots_create_tidy_data(
+      years = 2002, reporters = "chl", partners = "arg", table = "yrpc",
+      chapters = "03"
+    )
+
+    # dim(test_data)
+
+    expect_is(test_data, "data.frame")
+    expect_equal(ncol(test_data), 14)
+
+    # sort(unique(ots_commodities$chapter_code))
+    # sort(unique(ots_commodities$section_code))
+
+    # unique(substr(test_data$commodity_code, 1, 2))
+
+    expect_equal(unique(substr(test_data$commodity_code, 1, 2)), "03")
+  })
+})
+
+test_that("valid input + no cache + group filter = yrpc table", {
+  skip_on_cran()
+  vcr::use_cassette(name = "chl_arg_2002_yrpc_vegetables_chapter", {
+    # load_all()
+
+    # library(dplyr)
+
+    # test_data_2 <- ots_create_tidy_data(
+    #   years = 2002, reporters = "chl", partners = "arg", table = "yrpc"
+    # ) %>%
+    #   filter(section_code == "02")
+
+    # dim(test_data_2)
+
+    test_data <- ots_create_tidy_data(
+      years = 2002, reporters = "chl", partners = "arg", table = "yrpc",
+       sections = "02"
+    )
+
+    # dim(test_data)
+
+    expect_is(test_data, "data.frame")
+    expect_equal(ncol(test_data), 14)
+
+    # sort(unique(ots_commodities$chapter_code))
+    # sort(unique(ots_commodities$section_code))
+
+    # unique(substr(test_data$commodity_code, 1, 2))
+  })
+})
+
 test_that("unused commodities argument = yr table + warning", {
   skip_on_cran()
   vcr::use_cassette(name = "chl_arg_2002_yr_apple", {

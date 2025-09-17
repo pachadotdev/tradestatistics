@@ -9,8 +9,12 @@ A data frame with 5,302 observations on the following 4 variables
 \describe{
   \item{\code{commodity_code}}{HS six digits commodity code (e.g. 010110)}
   \item{\code{commodity_code_short}}{HS four digits commodity code (e.g. 0101)}
-  \item{\code{commodity_fullname_english}}{HS six digits commodity name (e.g. 'Horses, asses, mules and hinnies; live, pure-bred breeding animals')}
-  \item{\code{section_code}}{HS section code (e.g. '01')}
+  \item{\code{commodity_name}}{HS six digits commodity name (e.g. 'Horses, asses, mules and hinnies; live, pure-bred breeding animals')}
+  \item{\code{chapter_code}}{HS chapter code (e.g. 01)}
+  \item{\code{chapter_name}}{HS chapter name (e.g. 'Animals; live')}
+  \item{\code{section_code}}{HS section code (e.g. 01)}
+  \item{\code{section_name}}{HS section name (e.g. 'Live animals; animal products')}
+  \item{\code{section_color}}{Color assigned to each HS section for visualization purposes (e.g. '#74c0e2')}
 }
 }
 \source{
