@@ -112,8 +112,8 @@ ots_create_tidy_data_unmemoised <- function(years = 2018,
     value = TRUE
   )
 
-  year_range <- try(read.csv("http://127.0.0.1:4949/year_range"))
-  # year_range <- try(read.csv("https://api.tradestatistics.io/year_range"))
+  # year_range <- try(read.csv("http://127.0.0.1:4949/year_range"))
+  year_range <- try(read.csv("https://api.tradestatistics.io/year_range"))
   year_range <- try(as.numeric(year_range$year))
 
   if (all(years %in% min(year_range):max(year_range)) != TRUE &&
