@@ -108,8 +108,8 @@ ots_create_tidy_data_unmemoised <- function(years = 2018,
     value = TRUE
   )
 
-  year_range <- try(fromJSON("http://127.0.0.1:5000/years"))
-  # year_range <- try(fromJSON("https://api.tradestatistics.io/years"))
+  # year_range <- try(fromJSON("http://127.0.0.1:5000/years"))
+  year_range <- try(fromJSON("https://api.tradestatistics.io/years"))
   year_range <- try(as.numeric(year_range$year))
 
   if (all(years %in% min(year_range):max(year_range)) != TRUE &&
