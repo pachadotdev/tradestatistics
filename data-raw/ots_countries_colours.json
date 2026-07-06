@@ -1,0 +1,1537 @@
+[
+  {
+    "iso3_dynamic": "AGO",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "BDI",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "BEN",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "BFA",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "BWA",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "CAF",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "CIV",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "CMR",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "COD",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "COG",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "COM",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "CPV",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "DHY",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "DJI",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "DZA",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "EGY",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "ERI",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "ESH",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "ETF",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "ETH",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "GAB",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "GHA",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "GIN",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "GMB",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "GNB",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "GNQ",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "HVO",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "KEN",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "LBR",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "LBY",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "LSO",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "MAR",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "MDG",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "MLI",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "MOZ",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "MRT",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "MUS",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "MWI",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "MYT",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "NAM",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "NER",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "NGA",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "REU",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "RHO",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "RWA",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "SDN",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "SDN.X",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "SEN",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "SHN",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "SLE",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "SOM",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "SSD",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "STP",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "SWZ",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "SYC",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "TAN",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "TCD",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "TGO",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "TUN",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "TZA",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "UGA",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "ZAF",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "ZAF.X",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "ZAR",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "ZMB",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "ZPM",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "ZW1",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "ZWE",
+    "region_id": 2,
+    "region_colour": "#d1a1bc"
+  },
+  {
+    "iso3_dynamic": "ABW",
+    "region_id": 3,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "AIA",
+    "region_id": 3,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "ANT",
+    "region_id": 3,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "ANT.X",
+    "region_id": 3,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "ATG",
+    "region_id": 3,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "BES",
+    "region_id": 3,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "BHS",
+    "region_id": 3,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "BLM",
+    "region_id": 3,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "BMU",
+    "region_id": 3,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "BRB",
+    "region_id": 3,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "CUB",
+    "region_id": 3,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "CUW",
+    "region_id": 3,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "CYM",
+    "region_id": 3,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "DMA",
+    "region_id": 3,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "DOM",
+    "region_id": 3,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "GLP",
+    "region_id": 3,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "GLP.X",
+    "region_id": 3,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "GRD",
+    "region_id": 3,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "HTI",
+    "region_id": 3,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "JAM",
+    "region_id": 3,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "KN1",
+    "region_id": 3,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "KNA",
+    "region_id": 3,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "LCA",
+    "region_id": 3,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "MAF",
+    "region_id": 3,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "MSR",
+    "region_id": 3,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "MTQ",
+    "region_id": 3,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "PRI",
+    "region_id": 3,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "SXM",
+    "region_id": 3,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "TCA",
+    "region_id": 3,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "TTO",
+    "region_id": 3,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "VCT",
+    "region_id": 3,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "VGB",
+    "region_id": 3,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "VIR",
+    "region_id": 3,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "BLZ",
+    "region_id": 4,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "CRI",
+    "region_id": 4,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "GTM",
+    "region_id": 4,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "HND",
+    "region_id": 4,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "NIC",
+    "region_id": 4,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "PAN",
+    "region_id": 4,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "PAN.X",
+    "region_id": 4,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "PCZ",
+    "region_id": 4,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "SLV",
+    "region_id": 4,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "KGZ",
+    "region_id": 5,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "SVU",
+    "region_id": 5,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "TJK",
+    "region_id": 5,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "TKM",
+    "region_id": 5,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "UZB",
+    "region_id": 5,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "CHN",
+    "region_id": 6,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "HKG",
+    "region_id": 6,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "JPN",
+    "region_id": 6,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "KOR",
+    "region_id": 6,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "MAC",
+    "region_id": 6,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "MNG",
+    "region_id": 6,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "PRK",
+    "region_id": 6,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "TWN",
+    "region_id": 6,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "KAZ",
+    "region_id": 7,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "RUS",
+    "region_id": 7,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "TUR",
+    "region_id": 7,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "ALA",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "ALB",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "AND",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "ARM",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "AUT",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "AZE",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "BEL",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "BGR",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "BIH",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "BLR",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "BLX",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "BYS",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "CHE",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "CSK",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "CYP",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "CZE",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "DDR",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "DEU",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "DEU.X",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "DNK",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "ESP",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "EST",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "EU10",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "EU12",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "EU12.X",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "EU15",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "EU25",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "EU27",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "EU28",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "EU6",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "EU9",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "FIN",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "FRA",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "FRO",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "GBR",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "GEO",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "GGY",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "GIB",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "GRC",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "HRV",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "HUN",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "IMN",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "IRL",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "ISL",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "ITA",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "JEY",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "KSV",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "LIE",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "LTU",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "LUX",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "LVA",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "MCO",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "MDA",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "MKD",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "MLT",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "MNE",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "NLD",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "NOR",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "POL",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "PRT",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "ROM",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "ROU",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "SCG",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "SJM",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "SMR",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "SRB",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "SRB.X",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "SVK",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "SVN",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "SWE",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "UKR",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "VAT",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "YUG",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "YUG.X",
+    "region_id": 8,
+    "region_colour": "#ede788"
+  },
+  {
+    "iso3_dynamic": "AFG",
+    "region_id": 9,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "ARE",
+    "region_id": 9,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "BHR",
+    "region_id": 9,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "GAZ",
+    "region_id": 9,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "IRN",
+    "region_id": 9,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "IRQ",
+    "region_id": 9,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "ISR",
+    "region_id": 9,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "JOR",
+    "region_id": 9,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "KWT",
+    "region_id": 9,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "LBN",
+    "region_id": 9,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "NTZ",
+    "region_id": 9,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "OMN",
+    "region_id": 9,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "PSE",
+    "region_id": 9,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "QAT",
+    "region_id": 9,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "SAU",
+    "region_id": 9,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "SAU.X",
+    "region_id": 9,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "SYR",
+    "region_id": 9,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "YEM",
+    "region_id": 9,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "YEM.X",
+    "region_id": 9,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "YMD",
+    "region_id": 9,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "CAN",
+    "region_id": 10,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "GRL",
+    "region_id": 10,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "MEX",
+    "region_id": 10,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "SPM",
+    "region_id": 10,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "USA",
+    "region_id": 10,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "ASM",
+    "region_id": 11,
+    "region_colour": "#a17cb0"
+  },
+  {
+    "iso3_dynamic": "AUS",
+    "region_id": 11,
+    "region_colour": "#a17cb0"
+  },
+  {
+    "iso3_dynamic": "CCK",
+    "region_id": 11,
+    "region_colour": "#a17cb0"
+  },
+  {
+    "iso3_dynamic": "COK",
+    "region_id": 11,
+    "region_colour": "#a17cb0"
+  },
+  {
+    "iso3_dynamic": "CXR",
+    "region_id": 11,
+    "region_colour": "#a17cb0"
+  },
+  {
+    "iso3_dynamic": "FJI",
+    "region_id": 11,
+    "region_colour": "#a17cb0"
+  },
+  {
+    "iso3_dynamic": "FSM",
+    "region_id": 11,
+    "region_colour": "#a17cb0"
+  },
+  {
+    "iso3_dynamic": "GEL",
+    "region_id": 11,
+    "region_colour": "#a17cb0"
+  },
+  {
+    "iso3_dynamic": "GUM",
+    "region_id": 11,
+    "region_colour": "#a17cb0"
+  },
+  {
+    "iso3_dynamic": "JTN",
+    "region_id": 11,
+    "region_colour": "#a17cb0"
+  },
+  {
+    "iso3_dynamic": "KIR",
+    "region_id": 11,
+    "region_colour": "#a17cb0"
+  },
+  {
+    "iso3_dynamic": "KIR.X",
+    "region_id": 11,
+    "region_colour": "#a17cb0"
+  },
+  {
+    "iso3_dynamic": "MHL",
+    "region_id": 11,
+    "region_colour": "#a17cb0"
+  },
+  {
+    "iso3_dynamic": "MID",
+    "region_id": 11,
+    "region_colour": "#a17cb0"
+  },
+  {
+    "iso3_dynamic": "MNP",
+    "region_id": 11,
+    "region_colour": "#a17cb0"
+  },
+  {
+    "iso3_dynamic": "NCL",
+    "region_id": 11,
+    "region_colour": "#a17cb0"
+  },
+  {
+    "iso3_dynamic": "NFK",
+    "region_id": 11,
+    "region_colour": "#a17cb0"
+  },
+  {
+    "iso3_dynamic": "NHB",
+    "region_id": 11,
+    "region_colour": "#a17cb0"
+  },
+  {
+    "iso3_dynamic": "NIU",
+    "region_id": 11,
+    "region_colour": "#a17cb0"
+  },
+  {
+    "iso3_dynamic": "NRU",
+    "region_id": 11,
+    "region_colour": "#a17cb0"
+  },
+  {
+    "iso3_dynamic": "NZL",
+    "region_id": 11,
+    "region_colour": "#a17cb0"
+  },
+  {
+    "iso3_dynamic": "PCI",
+    "region_id": 11,
+    "region_colour": "#a17cb0"
+  },
+  {
+    "iso3_dynamic": "PCN",
+    "region_id": 11,
+    "region_colour": "#a17cb0"
+  },
+  {
+    "iso3_dynamic": "PLW",
+    "region_id": 11,
+    "region_colour": "#a17cb0"
+  },
+  {
+    "iso3_dynamic": "PNG",
+    "region_id": 11,
+    "region_colour": "#a17cb0"
+  },
+  {
+    "iso3_dynamic": "PUS",
+    "region_id": 11,
+    "region_colour": "#a17cb0"
+  },
+  {
+    "iso3_dynamic": "PYF",
+    "region_id": 11,
+    "region_colour": "#a17cb0"
+  },
+  {
+    "iso3_dynamic": "SLB",
+    "region_id": 11,
+    "region_colour": "#a17cb0"
+  },
+  {
+    "iso3_dynamic": "TKL",
+    "region_id": 11,
+    "region_colour": "#a17cb0"
+  },
+  {
+    "iso3_dynamic": "TON",
+    "region_id": 11,
+    "region_colour": "#a17cb0"
+  },
+  {
+    "iso3_dynamic": "TUV",
+    "region_id": 11,
+    "region_colour": "#a17cb0"
+  },
+  {
+    "iso3_dynamic": "UMI",
+    "region_id": 11,
+    "region_colour": "#a17cb0"
+  },
+  {
+    "iso3_dynamic": "VUT",
+    "region_id": 11,
+    "region_colour": "#a17cb0"
+  },
+  {
+    "iso3_dynamic": "WAK",
+    "region_id": 11,
+    "region_colour": "#a17cb0"
+  },
+  {
+    "iso3_dynamic": "WLF",
+    "region_id": 11,
+    "region_colour": "#a17cb0"
+  },
+  {
+    "iso3_dynamic": "WSM",
+    "region_id": 11,
+    "region_colour": "#a17cb0"
+  },
+  {
+    "iso3_dynamic": "ARG",
+    "region_id": 12,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "BOL",
+    "region_id": 12,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "BRA",
+    "region_id": 12,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "CHL",
+    "region_id": 12,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "COL",
+    "region_id": 12,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "ECU",
+    "region_id": 12,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "FLK",
+    "region_id": 12,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "GUF",
+    "region_id": 12,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "GUY",
+    "region_id": 12,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "PER",
+    "region_id": 12,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "PRY",
+    "region_id": 12,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "SGS",
+    "region_id": 12,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "SUR",
+    "region_id": 12,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "URY",
+    "region_id": 12,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "VEN",
+    "region_id": 12,
+    "region_colour": "#a1aafb"
+  },
+  {
+    "iso3_dynamic": "BGD",
+    "region_id": 13,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "BTN",
+    "region_id": 13,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "IND",
+    "region_id": 13,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "IOT",
+    "region_id": 13,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "LKA",
+    "region_id": 13,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "MDV",
+    "region_id": 13,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "NPL",
+    "region_id": 13,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "PAK",
+    "region_id": 13,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "PAK.X",
+    "region_id": 13,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "SKM",
+    "region_id": 13,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "BRN",
+    "region_id": 14,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "BUR",
+    "region_id": 14,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "IDN",
+    "region_id": 14,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "KHM",
+    "region_id": 14,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "LAO",
+    "region_id": 14,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "MMR",
+    "region_id": 14,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "MYS",
+    "region_id": 14,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "MYS.X",
+    "region_id": 14,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "MYS.Y",
+    "region_id": 14,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "PHL",
+    "region_id": 14,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "SGP",
+    "region_id": 14,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "THA",
+    "region_id": 14,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "TLS",
+    "region_id": 14,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "VDR",
+    "region_id": 14,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "VNM",
+    "region_id": 14,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "VNM.X",
+    "region_id": 14,
+    "region_colour": "#a8c380"
+  },
+  {
+    "iso3_dynamic": "ATA",
+    "region_id": 15,
+    "region_colour": "#d3d3d3"
+  },
+  {
+    "iso3_dynamic": "ATF",
+    "region_id": 15,
+    "region_colour": "#d3d3d3"
+  },
+  {
+    "iso3_dynamic": "BAT",
+    "region_id": 15,
+    "region_colour": "#d3d3d3"
+  },
+  {
+    "iso3_dynamic": "BVT",
+    "region_id": 15,
+    "region_colour": "#d3d3d3"
+  },
+  {
+    "iso3_dynamic": "HMD",
+    "region_id": 15,
+    "region_colour": "#d3d3d3"
+  }
+]

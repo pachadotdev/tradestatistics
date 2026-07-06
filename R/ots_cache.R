@@ -24,7 +24,7 @@ ots_cache <- function(use_cache, file, ...) {
     d <- fread(file, yaml = TRUE)
     
     if (d$.hash[1] == hash) {
-      class(d) <- c("tbl_df", "tbl", "data.frame")
+      class(d) <- c("data.frame", "data.table")
       d$.hash <- NULL
       return(d)
     }

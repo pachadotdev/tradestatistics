@@ -1,5 +1,19 @@
 context("country code")
 
+test_that("ots_country_code works for a partial country name match", {
+  d <- ots_country_code("united")
+  expect_is(d, "data.frame")
+  expect_equal(nrow(d), 3L)
+})
+
+test_that("ots_country_code returns error for empty string", {
+  expect_error(ots_country_code(""))
+})
+
+test_that("ots_country_code returns error for NULL", {
+  expect_error(ots_country_code(NULL))
+})
+
 test_that("ots_country_code works properly for single matching", {
   test_country_1 <- ots_country_code("Chile")
   test_country_2 <- ots_country_code("CHILE")
@@ -32,4 +46,10 @@ test_that("ots_country_code returns an error when no countryname is specified", 
 test_that("ots_country_code returns 0 rows when no match exists", {
   d <- ots_country_code(countryname = "Abc")
   expect_equal(nrow(d), 0)
+})
+
+test_that("ots_country_code returns 0 rows for non-existing country", {
+  d <- ots_country_code("Wakanda")
+  expect_is(d, "data.frame")
+  expect_equal(nrow(d), 0L)
 })

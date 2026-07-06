@@ -1,0 +1,18 @@
+[
+  {
+    "broad_sector": "Agriculture",
+    "broad_sector_id": 1
+  },
+  {
+    "broad_sector": "Manufacturing",
+    "broad_sector_id": 2
+  },
+  {
+    "broad_sector": "Mining and Energy",
+    "broad_sector_id": 3
+  },
+  {
+    "broad_sector": "Services",
+    "broad_sector_id": 4
+  }
+]

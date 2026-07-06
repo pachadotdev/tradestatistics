@@ -6,12 +6,11 @@
 \usage{
 ots_create_tidy_data_memoised(
   years = 2018,
-  reporters = "usa",
-  partners = "all",
-  commodities = "all",
-  chapters = "all",
-  sections = "all",
-  table = "yr",
+  importers = "usa",
+  exporters = "all",
+  sectors = "all",
+  industries = "all",
+  table = "itpde_imp",
   max_attempts = 5
 )
 }

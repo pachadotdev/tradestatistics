@@ -1,3 +1,8 @@
+# version 7.0
+
+* Uses USITC data. This adds breaking changes as the API had to be fully changes.
+* The data is not at product level anymore and the finest level is industry.
+
 # version 6.0
 
 * Expands the data to 2023 but now it starts from 1988 (the year when the Harmonized

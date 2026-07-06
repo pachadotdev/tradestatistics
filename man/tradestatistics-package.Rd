@@ -19,6 +19,11 @@ Useful links:
 \author{
 \strong{Maintainer}: Mauricio Vargas \email{m.vargas.sepulveda@gmail.com} (\href{https://orcid.org/0000-0003-1017-7574}{ORCID}) [copyright holder]
 
+Authors:
+\itemize{
+  \item Mauricio Vargas \email{m.vargas.sepulveda@gmail.com} (\href{https://orcid.org/0000-0003-1017-7574}{ORCID}) [copyright holder]
+}
+
 Other contributors:
 \itemize{
   \item Joshua Kunst (contributed to different parts of the pre-release code) [contributor]
