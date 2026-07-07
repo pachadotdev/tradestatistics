@@ -6,7 +6,7 @@ http_interactions:
     status: 200
     headers:
       status: HTTP/1.1 200 OK
-      date: Mon, 06 Jul 2026 08:45:26 GMT
+      date: Tue, 07 Jul 2026 10:12:19 GMT
       content-type: application/json; charset=utf-8
       access-control-allow-origin: '*'
       content-encoding: gzip
@@ -27,7 +27,7 @@ http_interactions:
             "trade": 7.439
           }
         ]
-  recorded_at: 2026-07-06 08:45:26
+  recorded_at: 2026-07-07 10:12:19
 - request:
     method: GET
     uri: http://127.0.0.1:5000/itpde_imp_exp?year=2002&importer=chl&exporter=arg
@@ -35,7 +35,7 @@ http_interactions:
     status: 200
     headers:
       status: HTTP/1.1 200 OK
-      date: Mon, 06 Jul 2026 08:45:26 GMT
+      date: Tue, 07 Jul 2026 10:12:20 GMT
       content-type: application/json; charset=utf-8
       access-control-allow-origin: '*'
       content-encoding: gzip
@@ -50,7 +50,7 @@ http_interactions:
             "trade": 3014.558
           }
         ]
-  recorded_at: 2026-07-06 08:45:26
+  recorded_at: 2026-07-07 10:12:20
 - request:
     method: GET
     uri: http://127.0.0.1:5000/itpde_imp?year=2002&importer=chl
@@ -58,7 +58,7 @@ http_interactions:
     status: 200
     headers:
       status: HTTP/1.1 200 OK
-      date: Mon, 06 Jul 2026 08:45:26 GMT
+      date: Tue, 07 Jul 2026 10:12:20 GMT
       content-type: application/json; charset=utf-8
       access-control-allow-origin: '*'
       content-encoding: gzip
@@ -69,10 +69,10 @@ http_interactions:
           {
             "year": 2002,
             "importer_iso3_dynamic": "CHL",
-            "trade": 26065.6948
+            "trade": 16822.2473
           }
         ]
-  recorded_at: 2026-07-06 08:45:27
+  recorded_at: 2026-07-07 10:12:20
 - request:
     method: GET
     uri: http://127.0.0.1:5000/itpde_imp_sec?year=2002&importer=chl&sector=1
@@ -80,7 +80,7 @@ http_interactions:
     status: 200
     headers:
       status: HTTP/1.1 200 OK
-      date: Mon, 06 Jul 2026 08:45:27 GMT
+      date: Tue, 07 Jul 2026 10:12:20 GMT
       content-type: application/json; charset=utf-8
       access-control-allow-origin: '*'
       content-encoding: gzip
@@ -92,10 +92,10 @@ http_interactions:
             "year": 2002,
             "importer_iso3_dynamic": "CHL",
             "broad_sector_id": 1,
-            "trade": 1870.1147
+            "trade": 411.2847
           }
         ]
-  recorded_at: 2026-07-06 08:45:27
+  recorded_at: 2026-07-07 10:12:20
 - request:
     method: GET
     uri: http://127.0.0.1:5000/itpde_imp_ind?year=2002&importer=chl&industry=1
@@ -103,7 +103,7 @@ http_interactions:
     status: 200
     headers:
       status: HTTP/1.1 200 OK
-      date: Mon, 06 Jul 2026 08:45:27 GMT
+      date: Tue, 07 Jul 2026 10:12:20 GMT
       content-type: application/json; charset=utf-8
       access-control-allow-origin: '*'
       content-encoding: gzip
@@ -115,8 +115,8 @@ http_interactions:
             "year": 2002,
             "importer_iso3_dynamic": "CHL",
             "industry_id": 1,
-            "trade": 336.819
+            "trade": 44.22
           }
         ]
-  recorded_at: 2026-07-06 08:45:27
+  recorded_at: 2026-07-07 10:12:20
 recorded_with: VCR-vcr/2.1.0

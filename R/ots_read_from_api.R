@@ -64,8 +64,8 @@ ots_read_from_api <- function(year = NULL,
     "itpds" = sprintf("itpds?year=%s&importer=%s&exporter=%s&sector=%s&industry=%s", year, imp, exp, sec, ind)
   )
 
-  # base_url <- "http://127.0.0.1:5000/"
-  base_url <- "https://api.tradestatistics.io/"
+  base_url <- "http://127.0.0.1:5000/"
+  # base_url <- "https://api.tradestatistics.io/"
   
   resp <- HttpClient$new(url = base_url)
   resp <- resp$get(url)

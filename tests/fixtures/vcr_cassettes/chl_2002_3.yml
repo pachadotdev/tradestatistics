@@ -6,7 +6,7 @@ http_interactions:
     status: 200
     headers:
       status: HTTP/1.1 200 OK
-      date: Mon, 06 Jul 2026 08:45:27 GMT
+      date: Tue, 07 Jul 2026 10:12:21 GMT
       content-type: application/json; charset=utf-8
       access-control-allow-origin: '*'
       content-encoding: gzip
@@ -17,8 +17,8 @@ http_interactions:
           {
             "year": 2002,
             "importer_iso3_dynamic": "CHL",
-            "trade": 26065.6948
+            "trade": 16822.2473
           }
         ]
-  recorded_at: 2026-07-06 08:45:27
+  recorded_at: 2026-07-07 10:12:21
 recorded_with: VCR-vcr/2.1.0
