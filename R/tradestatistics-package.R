@@ -2,13 +2,7 @@
 "_PACKAGE"
 
 utils::globalVariables(c(
-  "year", "country_iso",
-  "country_name", "commodity_name", "section_name", "commodity_code", 
-  "group_code", "trade_value_usd_exp", "trade_value_usd_imp",
-  "trade_value_usd_top_exp", "trade_value_usd_top_imp",
-  "gdp_deflator", "conversion_factor", "conversion_year", "year_from",
-  "year_to", "observation", "..group", "..productname", "..section",
-  "..reference_year", "..year", "..columns_order", "."
+  "year", "country", "observation", "..columns_order", "."
   ))
 
 #' OTS Tables
@@ -19,34 +13,12 @@ utils::globalVariables(c(
 #' @keywords datasets
 #' @name ots_tables
 #' @usage ots_tables
-#' @source Open Trade Statistics
-#' @format A data frame with 12 rows and 3 variables
+#' @source Derived from USITC
+#' @format A data frame with 30 rows and 3 variables
 #' \describe{
 #'   \item{\code{table}}{Table name}
 #'   \item{\code{description}}{Description of table contents}
-#'   \item{\code{source}}{Source for the data (OTS tables are processed after UN Comtrade raw data)}
-#' }
-NULL
-
-#' GDP Deflator
-#'
-#' Year to year GDP deflator some of the countries in the OTS database. For 
-#' countries not available in the World Bank database, rows labelled as "wld" 
-#' are provided, which were computed as the weighted median for each year using 
-#' the GDP of listed countries for each year expressed as constant dollars of 
-#' the year 2010.
-#'
-#' @docType data
-#' @keywords datasets
-#' @name ots_gdp_deflator
-#' @usage ots_gdp_deflator
-#' @source Open Trade Statistics
-#' @format A data frame with 8,010 observations on the following 4 variables
-#' \describe{
-#'   \item{\code{year_from}}{Integer values in the range 1980-2020}
-#'   \item{\code{year_to}}{Integer values in the range 1981-2021}
-#'   \item{\code{country_iso}}{ISO code of the country (e.g. "chl" means Chile)}
-#'   \item{\code{gdp_deflator}}{Numeric value expressed as one plus 1-year deflator}
+#'   \item{\code{source}}{Source for the data}
 #' }
 NULL
 
@@ -58,53 +30,46 @@ NULL
 #' @keywords datasets
 #' @name ots_countries
 #' @usage ots_countries
-#' @source Open Trade Statistics
-#' @format A data frame with 275 observations on the following 5 variables
+#' @source Derived from USITC
+#' @format A data frame with 308 observations on the following 5 variables
 #' \describe{
-#'   \item{\code{country_iso}}{ISO-3 code of the country (e.g. "GBR")}
-#'   \item{\code{country_name}}{Country name (e.g. United Kingdom)}
-#'   \item{\code{continent_id}}{Numeric id of the continent where the country belongs to (e.g., 4)}
-#'   \item{\code{continent_name}}{Continent where the country belongs to (e.g., Europe)}
-#'   \item{\code{continent_color}}{Color assigned to each continent for visualization purposes (e.g., '#8abdb6')}
+#'   \item{\code{country}}{Official name (e.g. United Kingdom)}
+#'   \item{\code{iso3}}{ISO-3 code (e.g. "GBR")}
+#'   \item{\code{dynamic_code}}{Deambiguated ISO-3 code (e.g. "DEU.X" for East Germany)}
+#'   \item{\code{continent}}{Corresponding continent (e.g., Europe)}
+#'   \item{\code{colour}}{Assigned colour by continen (e.g., '#d1a1bc')}
 #' }
 NULL
 
-#' OTS Commodities
+#' OTS Sectors
 #'
-#' Official commodity names from the Harmonized System rev 2012
-#' (HS12, six digits detail).
+#' Broad sector IDs.
 #'
 #' @docType data
 #' @keywords datasets
-#' @name ots_commodities
-#' @usage ots_commodities
-#' @source Open Trade Statistics
-#' @format A data frame with 5,302 observations on the following 4 variables
+#' @name ots_sectors
+#' @usage ots_sectors
+#' @source Derived from USITC
+#' @format A data frame with 4 observations on the following 2 variables
 #' \describe{
-#'   \item{\code{commodity_code}}{HS six digits commodity code (e.g. 010110)}
-#'   \item{\code{commodity_code_short}}{HS four digits commodity code (e.g. 0101)}
-#'   \item{\code{commodity_name}}{HS six digits commodity name (e.g. 'Horses, asses, mules and hinnies; live, pure-bred breeding animals')}
-#'   \item{\code{chapter_code}}{HS chapter code (e.g. 01)}
-#'   \item{\code{chapter_name}}{HS chapter name (e.g. 'Animals; live')}
-#'   \item{\code{section_code}}{HS section code (e.g. 01)}
-#'   \item{\code{section_name}}{HS section name (e.g. 'Live animals; animal products')}
-#'   \item{\code{section_color}}{Color assigned to each HS section for visualization purposes (e.g. '#74c0e2')}
+#'   \item{\code{broad_sector}}{Sector name (e.g. 'Agriculture')}
+#'   \item{\code{broad_sector_id}}{Sector code (e.g. '1')}
+#'   \item{\code{colour}}{Sector colour (e.g., '#74c0e2')}
 #' }
 NULL
 
-#' OTS Commodities Short
+#' OTS Industries
 #'
-#' Official commodity names from the Harmonized System rev 2012
-#' (HS12, four digits detail).
+#' Industry IDs.
 #'
 #' @docType data
 #' @keywords datasets
-#' @name ots_commodities_short
-#' @usage ots_commodities_short
-#' @source Open Trade Statistics
-#' @format A data frame with 1,225 observations on the following 2 variables
+#' @name ots_industries
+#' @usage ots_industries
+#' @source Derived from USITC
+#' @format A data frame with 170 observations on the following 2 variables
 #' \describe{
-#'   \item{\code{commodity_code}}{HS four digits commodity code (e.g. 0101)}
-#'   \item{\code{commodity_name}}{HS four digits commodity names (e.g. 'Horses, asses, mules and hinnies; live')}
+#'   \item{\code{industry_descr}}{Industry name (e.g. 'Wheat')}
+#'   \item{\code{industry_id}}{Industry code (e.g. '1')}
 #' }
 NULL

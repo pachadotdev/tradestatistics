@@ -6,12 +6,11 @@
 \usage{
 ots_create_tidy_data(
   years = 2020,
-  reporters = "all",
-  partners = "all",
-  commodities = "all",
-  chapters = "all",
-  sections = "all",
-  table = "yr",
+  importers = "all",
+  exporters = "all",
+  sectors = "all",
+  industries = "all",
+  table = "itpde_imp",
   max_attempts = 5,
   use_cache = FALSE,
   file = NULL
@@ -19,25 +18,23 @@ ots_create_tidy_data(
 }
 \arguments{
 \item{years}{Year contained within the years specified in
-api.tradestatistics.io/year_range (e.g. \code{c(2002,2004)}, \code{c(2002:2004)} or \code{2002}).
+api.tradestatistics.io/year_range (e.g., \code{2002} or \code{seq(2002, 2010, 2)}).
 Default set to \code{2019}.}
 
-\item{reporters}{ISO code for reporter country (e.g. \code{"chl"}, \code{"Chile"} or
+\item{importers}{Importers (e.g. \code{"chl"}, \code{"Chile"} or
 \code{c("chl", "Peru")}). Default set to \code{"all"}.}
 
-\item{partners}{ISO code for partner country (e.g. \code{"chl"}, \code{"Chile"} or
+\item{exporters}{Exporters (e.g. \code{"chl"}, \code{"Chile"} or
 \code{c("chl", "Peru")}). Default set to \code{"all"}.}
 
-\item{commodities}{HS commodity codes (e.g. \code{"0101"}, \code{"01"} or search
-matches for \code{"apple"})
-to filter commodities. Default set to \code{"all"}.}
+\item{sectors}{Sectors (e.g. \code{"Agriculture"}, \code{1} or search matches for \code{"agri"})
+to filter sectors. Default set to \code{"all"}.}
 
-\item{chapters}{HS chapter codes (e.g. \code{"01"}). Default set to \code{"all"}.}
-
-\item{sections}{HS section codes (e.g. \code{"01"}). Default set to \code{"all"}.}
+\item{industries}{Industries (e.g. \code{"Cereal products"}, \code{5} or search matches for \code{"cereal"})
+to filter industries. Default set to \code{"all"}.}
 
 \item{table}{Character string to select the table to obtain the data.
-Default set to \code{yr} (Year - Reporter).
+Default set to \code{itpde_imp} (aggregate trade by importer-year).
 Run \code{ots_tables} in case of doubt.}
 
 \item{max_attempts}{How many times to try to download data in case the
@@ -65,17 +62,19 @@ performs different API calls to transform and return tidy data.
 # so these are just shown without evaluation according to CRAN rules
 
 # Run `ots_countries` to display the full table of countries
-# Run `ots_commodities` to display the full table of commodities
+# Run `ots_sectors` to display the full table of sectors
 
-# What does Chile export to China? (2002)
-ots_create_tidy_data(years = 2002, reporters = "chl", partners = "chn")
+# Agricultural trade (sector)
+ots_create_tidy_data(years = 2020, sectors = "Agriculture",
+ table = "itpde_sec")
 
-# What can we say about Horses export in Chile and the World? (2002)
-ots_create_tidy_data(years = 2002, commodities = "010110", table = "yc")
-ots_create_tidy_data(years = 2002, reporters = "chl", commodities = "010110", table = "yrc")
+# Cereal products trade (industry-importer)
+ots_create_tidy_data(years = 2020, importers = "chl",
+ industries = "Cereal products", table = "itpde_imp_ind")
 
-# What can we say about the different types of apples exported by Chile? (2002)
-ots_create_tidy_data(years = 2002, reporters = "chl", commodities = "apple", table = "yrc")
+# Aggregate trade (bilateral)
+ots_create_tidy_data(years = 2020, importers = "chl",
+ exporters = c("arg", "bra"), table = "itpde_imp_exp")
 }
 }
 \keyword{functions}

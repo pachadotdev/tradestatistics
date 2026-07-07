@@ -6,11 +6,11 @@
 \usage{
 ots_read_from_api(
   year = NULL,
-  reporter_iso = NULL,
-  partner_iso = NULL,
-  commodity_code = "all",
-  section_code = "all",
-  table = "yr",
+  importer = NULL,
+  exporter = NULL,
+  sector = "all",
+  industry = "all",
+  table = "itpde_imp",
   max_attempts = 5
 )
 }

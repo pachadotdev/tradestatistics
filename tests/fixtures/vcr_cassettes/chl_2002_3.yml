@@ -1,0 +1,24 @@
+http_interactions:
+- request:
+    method: GET
+    uri: http://127.0.0.1:5000/itpde_imp?year=2002&importer=chl
+  response:
+    status: 200
+    headers:
+      status: HTTP/1.1 200 OK
+      date: Tue, 07 Jul 2026 10:12:21 GMT
+      content-type: application/json; charset=utf-8
+      access-control-allow-origin: '*'
+      content-encoding: gzip
+      transfer-encoding: chunked
+    body:
+      string: |-
+        [
+          {
+            "year": 2002,
+            "importer_iso3_dynamic": "CHL",
+            "trade": 16822.2473
+          }
+        ]
+  recorded_at: 2026-07-07 10:12:21
+recorded_with: VCR-vcr/2.1.0

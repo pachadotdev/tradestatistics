@@ -1,0 +1,682 @@
+[
+  {
+    "industry_descr": "Wheat",
+    "industry_id": 1
+  },
+  {
+    "industry_descr": "Rice (raw)",
+    "industry_id": 2
+  },
+  {
+    "industry_descr": "Corn",
+    "industry_id": 3
+  },
+  {
+    "industry_descr": "Other cereals",
+    "industry_id": 4
+  },
+  {
+    "industry_descr": "Cereal products",
+    "industry_id": 5
+  },
+  {
+    "industry_descr": "Soybeans",
+    "industry_id": 6
+  },
+  {
+    "industry_descr": "Other oilseeds (excluding peanuts)",
+    "industry_id": 7
+  },
+  {
+    "industry_descr": "Animal feed ingredients and pet foods",
+    "industry_id": 8
+  },
+  {
+    "industry_descr": "Raw and refined sugar and sugar crops",
+    "industry_id": 9
+  },
+  {
+    "industry_descr": "Other sweeteners",
+    "industry_id": 10
+  },
+  {
+    "industry_descr": "Pulses and legumes, dried, preserved",
+    "industry_id": 11
+  },
+  {
+    "industry_descr": "Fresh fruit",
+    "industry_id": 12
+  },
+  {
+    "industry_descr": "Fresh vegetables",
+    "industry_id": 13
+  },
+  {
+    "industry_descr": "Prepared fruits and fruit juices",
+    "industry_id": 14
+  },
+  {
+    "industry_descr": "Prepared vegetables",
+    "industry_id": 15
+  },
+  {
+    "industry_descr": "Nuts",
+    "industry_id": 16
+  },
+  {
+    "industry_descr": "Live Cattle",
+    "industry_id": 17
+  },
+  {
+    "industry_descr": "Live Swine",
+    "industry_id": 18
+  },
+  {
+    "industry_descr": "Eggs",
+    "industry_id": 19
+  },
+  {
+    "industry_descr": "Other meats, livestock products, and live animals",
+    "industry_id": 20
+  },
+  {
+    "industry_descr": "Cocoa and cocoa products",
+    "industry_id": 21
+  },
+  {
+    "industry_descr": "Beverages, nec",
+    "industry_id": 22
+  },
+  {
+    "industry_descr": "Cotton",
+    "industry_id": 23
+  },
+  {
+    "industry_descr": "Tobacco leaves and cigarettes",
+    "industry_id": 24
+  },
+  {
+    "industry_descr": "Spices",
+    "industry_id": 25
+  },
+  {
+    "industry_descr": "Other agricultural products, nec",
+    "industry_id": 26
+  },
+  {
+    "industry_descr": "Forestry",
+    "industry_id": 27
+  },
+  {
+    "industry_descr": "Fishing",
+    "industry_id": 28
+  },
+  {
+    "industry_descr": "Mining of hard coal",
+    "industry_id": 29
+  },
+  {
+    "industry_descr": "Mining of lignite",
+    "industry_id": 30
+  },
+  {
+    "industry_descr": "Extraction crude petroleum and natural gas",
+    "industry_id": 31
+  },
+  {
+    "industry_descr": "Mining of iron ores",
+    "industry_id": 32
+  },
+  {
+    "industry_descr": "Other mining and quarring",
+    "industry_id": 33
+  },
+  {
+    "industry_descr": "Electricity production, collection, and distribution",
+    "industry_id": 34
+  },
+  {
+    "industry_descr": "Gas production and distribution",
+    "industry_id": 35
+  },
+  {
+    "industry_descr": "Processing/preserving of meat",
+    "industry_id": 36
+  },
+  {
+    "industry_descr": "Processing/preserving of fish",
+    "industry_id": 37
+  },
+  {
+    "industry_descr": "Processing/preserving of fruit & vegetables",
+    "industry_id": 38
+  },
+  {
+    "industry_descr": "Vegetable and animal oils and fats",
+    "industry_id": 39
+  },
+  {
+    "industry_descr": "Dairy products",
+    "industry_id": 40
+  },
+  {
+    "industry_descr": "Grain mill products",
+    "industry_id": 41
+  },
+  {
+    "industry_descr": "Starches and starch products",
+    "industry_id": 42
+  },
+  {
+    "industry_descr": "Prepared animal feeds",
+    "industry_id": 43
+  },
+  {
+    "industry_descr": "Bakery products",
+    "industry_id": 44
+  },
+  {
+    "industry_descr": "Sugar",
+    "industry_id": 45
+  },
+  {
+    "industry_descr": "Cocoa chocolate and sugar confectionery",
+    "industry_id": 46
+  },
+  {
+    "industry_descr": "Macaroni noodles & similar products",
+    "industry_id": 47
+  },
+  {
+    "industry_descr": "Other food products n.e.c.",
+    "industry_id": 48
+  },
+  {
+    "industry_descr": "Distilling rectifying & blending of spirits",
+    "industry_id": 49
+  },
+  {
+    "industry_descr": "Wines",
+    "industry_id": 50
+  },
+  {
+    "industry_descr": "Malt liquors and malt",
+    "industry_id": 51
+  },
+  {
+    "industry_descr": "Soft drinks; mineral waters",
+    "industry_id": 52
+  },
+  {
+    "industry_descr": "Tobacco products",
+    "industry_id": 53
+  },
+  {
+    "industry_descr": "Textile fibre preparation; textile weaving",
+    "industry_id": 54
+  },
+  {
+    "industry_descr": "Made-up textile articles except apparel",
+    "industry_id": 55
+  },
+  {
+    "industry_descr": "Carpets and rugs",
+    "industry_id": 56
+  },
+  {
+    "industry_descr": "Cordage rope twine and netting",
+    "industry_id": 57
+  },
+  {
+    "industry_descr": "Other textiles n.e.c.",
+    "industry_id": 58
+  },
+  {
+    "industry_descr": "Knitted and crocheted fabrics and articles",
+    "industry_id": 59
+  },
+  {
+    "industry_descr": "Wearing apparel except fur apparel",
+    "industry_id": 60
+  },
+  {
+    "industry_descr": "Dressing & dyeing of fur; processing of fur",
+    "industry_id": 61
+  },
+  {
+    "industry_descr": "Tanning and dressing of leather",
+    "industry_id": 62
+  },
+  {
+    "industry_descr": "Luggage handbags etc.; saddlery & harness",
+    "industry_id": 63
+  },
+  {
+    "industry_descr": "Footwear",
+    "industry_id": 64
+  },
+  {
+    "industry_descr": "Sawmilling and planing of wood",
+    "industry_id": 65
+  },
+  {
+    "industry_descr": "Veneer sheets plywood particle board etc.",
+    "industry_id": 66
+  },
+  {
+    "industry_descr": "Builders' carpentry and joinery",
+    "industry_id": 67
+  },
+  {
+    "industry_descr": "Wooden containers",
+    "industry_id": 68
+  },
+  {
+    "industry_descr": "Other wood products; articles of cork/straw",
+    "industry_id": 69
+  },
+  {
+    "industry_descr": "Pulp paper and paperboard",
+    "industry_id": 70
+  },
+  {
+    "industry_descr": "Corrugated paper and paperboard",
+    "industry_id": 71
+  },
+  {
+    "industry_descr": "Other articles of paper and paperboard",
+    "industry_id": 72
+  },
+  {
+    "industry_descr": "Publishing of books and other publications",
+    "industry_id": 73
+  },
+  {
+    "industry_descr": "Publishing of newspapers journals etc.",
+    "industry_id": 74
+  },
+  {
+    "industry_descr": "Publishing of recorded media",
+    "industry_id": 75
+  },
+  {
+    "industry_descr": "Other publishing",
+    "industry_id": 76
+  },
+  {
+    "industry_descr": "Printing",
+    "industry_id": 77
+  },
+  {
+    "industry_descr": "Service activities related to printing",
+    "industry_id": 78
+  },
+  {
+    "industry_descr": "Coke oven products",
+    "industry_id": 79
+  },
+  {
+    "industry_descr": "Refined petroleum products",
+    "industry_id": 80
+  },
+  {
+    "industry_descr": "Processing of nuclear fuel",
+    "industry_id": 81
+  },
+  {
+    "industry_descr": "Basic chemicals except fertilizers",
+    "industry_id": 82
+  },
+  {
+    "industry_descr": "Fertilizers and nitrogen compounds",
+    "industry_id": 83
+  },
+  {
+    "industry_descr": "Plastics in primary forms; synthetic rubber",
+    "industry_id": 84
+  },
+  {
+    "industry_descr": "Pesticides and other agro-chemical products",
+    "industry_id": 85
+  },
+  {
+    "industry_descr": "Paints varnishes printing ink and mastics",
+    "industry_id": 86
+  },
+  {
+    "industry_descr": "Pharmaceuticals medicinal chemicals etc.",
+    "industry_id": 87
+  },
+  {
+    "industry_descr": "Soap cleaning & cosmetic preparations",
+    "industry_id": 88
+  },
+  {
+    "industry_descr": "Other chemical products n.e.c.",
+    "industry_id": 89
+  },
+  {
+    "industry_descr": "Man-made fibres",
+    "industry_id": 90
+  },
+  {
+    "industry_descr": "Rubber tyres and tubes",
+    "industry_id": 91
+  },
+  {
+    "industry_descr": "Other rubber products",
+    "industry_id": 92
+  },
+  {
+    "industry_descr": "Plastic products",
+    "industry_id": 93
+  },
+  {
+    "industry_descr": "Glass and glass products",
+    "industry_id": 94
+  },
+  {
+    "industry_descr": "Pottery china and earthenware",
+    "industry_id": 95
+  },
+  {
+    "industry_descr": "Refractory ceramic products",
+    "industry_id": 96
+  },
+  {
+    "industry_descr": "Struct.non-refractory clay; ceramic products",
+    "industry_id": 97
+  },
+  {
+    "industry_descr": "Cement lime and plaster",
+    "industry_id": 98
+  },
+  {
+    "industry_descr": "Articles of concrete cement and plaster",
+    "industry_id": 99
+  },
+  {
+    "industry_descr": "Cutting shaping & finishing of stone",
+    "industry_id": 100
+  },
+  {
+    "industry_descr": "Other non-metallic mineral products n.e.c.",
+    "industry_id": 101
+  },
+  {
+    "industry_descr": "Basic iron and steel",
+    "industry_id": 102
+  },
+  {
+    "industry_descr": "Basic precious and non-ferrous metals",
+    "industry_id": 103
+  },
+  {
+    "industry_descr": "Structural metal products",
+    "industry_id": 104
+  },
+  {
+    "industry_descr": "Tanks reservoirs and containers of metal",
+    "industry_id": 105
+  },
+  {
+    "industry_descr": "Steam generators",
+    "industry_id": 106
+  },
+  {
+    "industry_descr": "Cutlery hand tools and general hardware",
+    "industry_id": 107
+  },
+  {
+    "industry_descr": "Other fabricated metal products n.e.c.",
+    "industry_id": 108
+  },
+  {
+    "industry_descr": "Engines & turbines (not for transport equipment)",
+    "industry_id": 109
+  },
+  {
+    "industry_descr": "Pumps compressors taps and valves",
+    "industry_id": 110
+  },
+  {
+    "industry_descr": "Bearings gears gearing & driving elements",
+    "industry_id": 111
+  },
+  {
+    "industry_descr": "Ovens furnaces and furnace burners",
+    "industry_id": 112
+  },
+  {
+    "industry_descr": "Lifting and handling equipment",
+    "industry_id": 113
+  },
+  {
+    "industry_descr": "Other general purpose machinery",
+    "industry_id": 114
+  },
+  {
+    "industry_descr": "Agricultural and forestry machinery",
+    "industry_id": 115
+  },
+  {
+    "industry_descr": "Machine tools",
+    "industry_id": 116
+  },
+  {
+    "industry_descr": "Machinery for metallurgy",
+    "industry_id": 117
+  },
+  {
+    "industry_descr": "Machinery for mining & construction",
+    "industry_id": 118
+  },
+  {
+    "industry_descr": "Food/beverage/tobacco processing machinery",
+    "industry_id": 119
+  },
+  {
+    "industry_descr": "Machinery for textile apparel and leather",
+    "industry_id": 120
+  },
+  {
+    "industry_descr": "Weapons and ammunition",
+    "industry_id": 121
+  },
+  {
+    "industry_descr": "Other special purpose machinery",
+    "industry_id": 122
+  },
+  {
+    "industry_descr": "Domestic appliances n.e.c.",
+    "industry_id": 123
+  },
+  {
+    "industry_descr": "Office accounting and computing machinery",
+    "industry_id": 124
+  },
+  {
+    "industry_descr": "Electric motors generators and transformers",
+    "industry_id": 125
+  },
+  {
+    "industry_descr": "Electricity distribution & control apparatus",
+    "industry_id": 126
+  },
+  {
+    "industry_descr": "Insulated wire and cable",
+    "industry_id": 127
+  },
+  {
+    "industry_descr": "Accumulators primary cells and batteries",
+    "industry_id": 128
+  },
+  {
+    "industry_descr": "Lighting equipment and electric lamps",
+    "industry_id": 129
+  },
+  {
+    "industry_descr": "Other electrical equipment n.e.c.",
+    "industry_id": 130
+  },
+  {
+    "industry_descr": "Electronic valves tubes etc.",
+    "industry_id": 131
+  },
+  {
+    "industry_descr": "TV/radio transmitters; line comm. apparatus",
+    "industry_id": 132
+  },
+  {
+    "industry_descr": "TV and radio receivers and associated goods",
+    "industry_id": 133
+  },
+  {
+    "industry_descr": "Medical surgical and orthopaedic equipment",
+    "industry_id": 134
+  },
+  {
+    "industry_descr": "Measuring/testing/navigating appliances etc.",
+    "industry_id": 135
+  },
+  {
+    "industry_descr": "Optical instruments & photographic equipment",
+    "industry_id": 136
+  },
+  {
+    "industry_descr": "Watches and clocks",
+    "industry_id": 137
+  },
+  {
+    "industry_descr": "Motor vehicles",
+    "industry_id": 138
+  },
+  {
+    "industry_descr": "Automobile bodies trailers & semi-trailers",
+    "industry_id": 139
+  },
+  {
+    "industry_descr": "Parts/accessories for automobiles",
+    "industry_id": 140
+  },
+  {
+    "industry_descr": "Building and repairing of ships",
+    "industry_id": 141
+  },
+  {
+    "industry_descr": "Building/repairing of pleasure/sport. boats",
+    "industry_id": 142
+  },
+  {
+    "industry_descr": "Railway/tramway locomotives & rolling stock",
+    "industry_id": 143
+  },
+  {
+    "industry_descr": "Aircraft and spacecraft",
+    "industry_id": 144
+  },
+  {
+    "industry_descr": "Motorcycles",
+    "industry_id": 145
+  },
+  {
+    "industry_descr": "Bicycles and invalid carriages",
+    "industry_id": 146
+  },
+  {
+    "industry_descr": "Other transport equipment n.e.c.",
+    "industry_id": 147
+  },
+  {
+    "industry_descr": "Furniture",
+    "industry_id": 148
+  },
+  {
+    "industry_descr": "Jewellery and related articles",
+    "industry_id": 149
+  },
+  {
+    "industry_descr": "Musical instruments",
+    "industry_id": 150
+  },
+  {
+    "industry_descr": "Sports goods",
+    "industry_id": 151
+  },
+  {
+    "industry_descr": "Games and toys",
+    "industry_id": 152
+  },
+  {
+    "industry_descr": "Other manufacturing n.e.c.",
+    "industry_id": 153
+  },
+  {
+    "industry_descr": "154 Manufacturing services on physical inputs",
+    "industry_id": 154
+  },
+  {
+    "industry_descr": "155 Maintenance and repair services n.i.e.",
+    "industry_id": 155
+  },
+  {
+    "industry_descr": "156 Transport",
+    "industry_id": 156
+  },
+  {
+    "industry_descr": "157 Travel",
+    "industry_id": 157
+  },
+  {
+    "industry_descr": "158 Construction",
+    "industry_id": 158
+  },
+  {
+    "industry_descr": "159 Insurance and pension services",
+    "industry_id": 159
+  },
+  {
+    "industry_descr": "160 Financial services",
+    "industry_id": 160
+  },
+  {
+    "industry_descr": "161 Charges for use of intellectual property",
+    "industry_id": 161
+  },
+  {
+    "industry_descr": "162 Telecom, computer, information services",
+    "industry_id": 162
+  },
+  {
+    "industry_descr": "163 Other business services",
+    "industry_id": 163
+  },
+  {
+    "industry_descr": "164 Heritage and recreational services",
+    "industry_id": 164
+  },
+  {
+    "industry_descr": "165 Health services",
+    "industry_id": 165
+  },
+  {
+    "industry_descr": "166 Education services",
+    "industry_id": 166
+  },
+  {
+    "industry_descr": "167 Government goods and services n.i.e.",
+    "industry_id": 167
+  },
+  {
+    "industry_descr": "168 Services not allocated",
+    "industry_id": 168
+  },
+  {
+    "industry_descr": "169 Trade-related services",
+    "industry_id": 169
+  },
+  {
+    "industry_descr": "170 Other personal services",
+    "industry_id": 170
+  }
+]

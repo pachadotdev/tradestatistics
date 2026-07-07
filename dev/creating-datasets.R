@@ -1,13 +1,12 @@
 # Tables ----
 
 library(data.table)
-library(dplyr)
 library(jsonlite)
 
-base_url <- "http://localhost:4949/"
+base_url <- "http://localhost:5000/"
 
 tables_url <- paste0(base_url, "tables")
-tables_raw_file <- "data-raw/ots_tables.csv"
+tables_raw_file <- "data-raw/ots_tables.json"
 tables_tidy_file <- "data/ots_tables.rda"
 
 if (!file.exists(tables_raw_file)) {
@@ -15,8 +14,7 @@ if (!file.exists(tables_raw_file)) {
 }
 
 if (!file.exists(tables_tidy_file)) {
-  ots_tables <- fread(tables_raw_file) %>% 
-    mutate_if(is.character, function(x) { iconv(x, to = "ASCII//TRANSLIT")})
+  ots_tables <- as.data.table(fromJSON(tables_raw_file))
   save(ots_tables, file = tables_tidy_file, version = 2)
 }
 
@@ -26,77 +24,85 @@ countries_url <- paste0(base_url, "countries")
 countries_raw_file <- "data-raw/ots_countries.json"
 countries_tidy_file <- "data/ots_countries.rda"
 
+countries_colours_url <- paste0(base_url, "countries_colours")
+countries_colours_raw_file <- "data-raw/ots_countries_colours.json"
+countries_colours_tidy_file <- "data/ots_colours_countries.rda"
+
 if (!file.exists(countries_raw_file)) {
   download.file(countries_url, countries_raw_file)
 }
 
+if (!file.exists(countries_colours_raw_file)) {
+  download.file(countries_colours_url, countries_colours_raw_file)
+}
+
 if (!file.exists(countries_tidy_file)) {
-  ots_countries <- fromJSON(countries_raw_file) %>% 
-    mutate_if(is.character, function(x) { iconv(x, to = "ASCII//TRANSLIT")}) %>% 
-    mutate_if(is.numeric, as.integer) %>% 
-    as.data.table()
-  
+  ots_countries <- as.data.table(fromJSON(countries_raw_file))
+  ots_countries_colours <- as.data.table(fromJSON(countries_colours_raw_file))
+
+  setnames(ots_countries_colours, "iso3_dynamic", "dynamic_code")
+
+  ots_countries <- merge(ots_countries, ots_countries_colours)
+
+  ots_countries[, continent := fcase(
+    region_id == 1, "Not applicable",
+    region_id == 2, "Africa",
+    region_id %in% c(3L, 4L, 10L, 12L), "Americas",
+    region_id %in% c(5L, 6L, 7L, 9L, 13L, 14L), "Asia",
+    region_id == 8L, "Europe",
+    region_id == 11L, "Oceania",
+    default = "Not applicable"
+  )]
+
+  ots_countries[, region_id := NULL]
+
+  setnames(ots_countries, "region_colour", "colour")
+  setcolorder(ots_countries, "colour", after = "continent")
+  setcolorder(ots_countries, "iso3", before = "dynamic_code")
+
   save(ots_countries, file = countries_tidy_file, version = 2)
 }
 
-# Commodity codes ----
+# Sector codes ----
 
-commodities_url <- paste0(base_url, "commodities")
-commodities_raw_file <- "data-raw/ots_commodities.json"
-commodities_tidy_file <- "data/ots_commodities.rda"
+sectors_url <- paste0(base_url, "sectors")
+sectors_raw_file <- "data-raw/ots_sectors.json"
+sectors_tidy_file <- "data/ots_sectors.rda"
 
-if (!file.exists(commodities_raw_file)) {
-  download.file(commodities_url, commodities_raw_file)
+sectors_colours_url <- paste0(base_url, "sectors_colours")
+sectors_colours_raw_file <- "data-raw/ots_sectors_colours.json"
+sectors_colours_tidy_file <- "data/ots_sectors_colours.rda"
+
+if (!file.exists(sectors_raw_file)) {
+  download.file(sectors_url, sectors_raw_file)
 }
 
-if (!file.exists(commodities_tidy_file)) {
-  ots_commodities <- fromJSON(commodities_raw_file) %>% 
-    mutate_if(is.character, function(x) { iconv(x, to = "ASCII//TRANSLIT")}) %>% 
-    as.data.table()
-  
-  save(ots_commodities, file = commodities_tidy_file, version = 2, compress = "xz")
+if (!file.exists(sectors_colours_raw_file)) {
+  download.file(sectors_colours_url, sectors_colours_raw_file)
 }
 
-# Shorter commodity codes ----
+if (!file.exists(sectors_tidy_file)) {
+  ots_sectors <- as.data.table(fromJSON(sectors_raw_file))
+  ots_sectors_colours <- as.data.table(fromJSON(sectors_colours_raw_file))
 
-commodities_short_url <- paste0(base_url, "commodities_short")
-commodities_short_raw_file <- "data-raw/ots_commodities_short.json"
-commodities_short_tidy_file <- "data/ots_commodities_short.rda"
+  ots_sectors <- merge(ots_sectors, ots_sectors_colours)
 
-if (!file.exists(commodities_short_raw_file)) {
-  download.file(commodities_short_url, commodities_short_raw_file)
+  setcolorder(ots_sectors, "broad_sector", before = "broad_sector_id")
+
+  save(ots_sectors, file = sectors_tidy_file, version = 2)
 }
 
-if (!file.exists(commodities_short_tidy_file)) {
-  ots_commodities_short <- fromJSON(commodities_short_raw_file) %>% 
-    mutate_if(is.character, function(x) { iconv(x, to = "ASCII//TRANSLIT")}) %>% 
-    as.data.table()
-  
-  save(ots_commodities_short, file = commodities_short_tidy_file, version = 2, compress = "xz")
+# Industry codes ----
+
+industries_url <- paste0(base_url, "industries")
+industries_raw_file <- "data-raw/ots_industries.json"
+industries_tidy_file <- "data/ots_industries.rda"
+
+if (!file.exists(industries_raw_file)) {
+  download.file(industries_url, industries_raw_file)
 }
 
-# GDP deflator ----
-
-# Source
-# https://data.worldbank.org/indicator/NY.GDP.DEFL.KD.ZG
-
-gdp_deflator_url <- paste0(base_url, "gdp_deflator")
-gdp_deflator_raw_file <- "data-raw/ots_gdp_deflator.json"
-gdp_deflator_tidy_file <- "data/ots_gdp_deflator.rda"
-
-if (!file.exists(gdp_deflator_raw_file)) {
-  download.file(gdp_deflator_url, gdp_deflator_raw_file)
-}
-
-if (!file.exists(gdp_deflator_tidy_file)) {
-  ots_gdp_deflator <- fromJSON(gdp_deflator_raw_file) %>% 
-    mutate_if(is.character, function(x) { iconv(x, to = "ASCII//TRANSLIT")}) %>% 
-    mutate(
-      year_from = as.integer(year_from),
-      year_to = as.integer(year_to),
-      gdp_deflator = as.numeric(gdp_deflator)
-    ) %>%
-    as.data.table()
-  
-  save(ots_gdp_deflator, file = gdp_deflator_tidy_file, version = 2)
+if (!file.exists(industries_tidy_file)) {
+  ots_industries <- as.data.table(fromJSON(industries_raw_file))
+  save(ots_industries, file = industries_tidy_file, version = 2)
 }

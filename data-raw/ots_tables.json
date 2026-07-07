@@ -1,0 +1,152 @@
+[
+  {
+    "table": "countries",
+    "description": "Countries",
+    "source": "Derived from USITC"
+  },
+  {
+    "table": "countries_colours",
+    "description": "Contries coloured by continent (for visualization)",
+    "source": "Derived from USITC"
+  },
+  {
+    "table": "importers",
+    "description": "Importers per year",
+    "source": "Derived from USITC"
+  },
+  {
+    "table": "exporters",
+    "description": "Exporters per year",
+    "source": "Derived from USITC"
+  },
+  {
+    "table": "sectors",
+    "description": "Broad sectors",
+    "source": "Derived from USITC"
+  },
+  {
+    "table": "sectors_colours",
+    "description": "Broad sectors with colour",
+    "source": "Derived from USITC"
+  },
+  {
+    "table": "industries",
+    "description": "Industries",
+    "source": "Derived from USITC"
+  },
+  {
+    "table": "years",
+    "description": "Years",
+    "source": "Derived from USITC"
+  },
+  {
+    "table": "itpde",
+    "description": "International Trade and Production for Estimation",
+    "source": "USITC"
+  },
+  {
+    "table": "itpde_imp",
+    "description": "International Trade and Production for Estimation, aggregated by year and importer",
+    "source": "USITC"
+  },
+  {
+    "table": "itpde_exp",
+    "description": "International Trade and Production for Estimation, aggregated by year and exporter",
+    "source": "USITC"
+  },
+  {
+    "table": "itpde_imp_exp",
+    "description": "International Trade and Production for Estimation, aggregated by year, importer, and exporter",
+    "source": "USITC"
+  },
+  {
+    "table": "itpde_imp_sec",
+    "description": "International Trade and Production for Estimation, aggregated by year, importer, and sector",
+    "source": "USITC"
+  },
+  {
+    "table": "itpde_imp_ind",
+    "description": "International Trade and Production for Estimation, aggregated by year, importer, and industry",
+    "source": "USITC"
+  },
+  {
+    "table": "itpde_exp_sec",
+    "description": "International Trade and Production for Estimation, aggregated by year, exporter, and sector",
+    "source": "USITC"
+  },
+  {
+    "table": "itpde_exp_ind",
+    "description": "International Trade and Production for Estimation, aggregated by year, exporter, and industry",
+    "source": "USITC"
+  },
+  {
+    "table": "itpde_sec",
+    "description": "International Trade and Production for Estimation, aggregated by year and sector",
+    "source": "USITC"
+  },
+  {
+    "table": "itpde_ind",
+    "description": "International Trade and Production for Estimation, aggregated by year and industry",
+    "source": "USITC"
+  },
+  {
+    "table": "itpde_imp_exp_sec",
+    "description": "International Trade and Production for Estimation, aggregated by year, importer, exporter, and sector",
+    "source": "USITC"
+  },
+  {
+    "table": "itpds",
+    "description": "International Trade and Production for Simulation",
+    "source": "USITC"
+  },
+  {
+    "table": "itpds_imp",
+    "description": "International Trade and Production for Simulation, aggregated by year and importer",
+    "source": "USITC"
+  },
+  {
+    "table": "itpds_exp",
+    "description": "International Trade and Production for Simulation, aggregated by year and exporter",
+    "source": "USITC"
+  },
+  {
+    "table": "itpds_imp_exp",
+    "description": "International Trade and Production for Simulation, aggregated by year, importer, and exporter",
+    "source": "USITC"
+  },
+  {
+    "table": "itpds_imp_sec",
+    "description": "International Trade and Production for Simulation, aggregated by year, importer, and sector",
+    "source": "USITC"
+  },
+  {
+    "table": "itpds_imp_ind",
+    "description": "International Trade and Production for Simulation, aggregated by year, importer, and industry",
+    "source": "USITC"
+  },
+  {
+    "table": "itpds_exp_sec",
+    "description": "International Trade and Production for Simulation, aggregated by year, exporter, and sector",
+    "source": "USITC"
+  },
+  {
+    "table": "itpds_exp_ind",
+    "description": "International Trade and Production for Simulation, aggregated by year, exporter, and industry",
+    "source": "USITC"
+  },
+  {
+    "table": "itpds_sec",
+    "description": "International Trade and Production for Simulation, aggregated by year and sector",
+    "source": "USITC"
+  },
+  {
+    "table": "itpds_ind",
+    "description": "International Trade and Production for Simulation, aggregated by year and industry",
+    "source": "USITC"
+  },
+  {
+    "table": "itpds_imp_exp_sec",
+    "description": "International Trade and Production for Simulation, aggregated by year, importer, exporter, and sector",
+    "source": "USITC"
+  }
+]

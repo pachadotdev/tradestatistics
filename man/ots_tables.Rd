@@ -5,15 +5,15 @@
 \alias{ots_tables}
 \title{OTS Tables}
 \format{
-A data frame with 12 rows and 3 variables
+A data frame with 30 rows and 3 variables
 \describe{
   \item{\code{table}}{Table name}
   \item{\code{description}}{Description of table contents}
-  \item{\code{source}}{Source for the data (OTS tables are processed after UN Comtrade raw data)}
+  \item{\code{source}}{Source for the data}
 }
 }
 \source{
-Open Trade Statistics
+Derived from USITC
 }
 \usage{
 ots_tables

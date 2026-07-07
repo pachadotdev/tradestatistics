@@ -5,17 +5,17 @@
 \alias{ots_countries}
 \title{OTS Countries}
 \format{
-A data frame with 275 observations on the following 5 variables
+A data frame with 308 observations on the following 5 variables
 \describe{
-  \item{\code{country_iso}}{ISO-3 code of the country (e.g. "GBR")}
-  \item{\code{country_name}}{Country name (e.g. United Kingdom)}
-  \item{\code{continent_id}}{Numeric id of the continent where the country belongs to (e.g., 4)}
-  \item{\code{continent_name}}{Continent where the country belongs to (e.g., Europe)}
-  \item{\code{continent_color}}{Color assigned to each continent for visualization purposes (e.g., '#8abdb6')}
+  \item{\code{country}}{Official name (e.g. United Kingdom)}
+  \item{\code{iso3}}{ISO-3 code (e.g. "GBR")}
+  \item{\code{dynamic_code}}{Deambiguated ISO-3 code (e.g. "DEU.X" for East Germany)}
+  \item{\code{continent}}{Corresponding continent (e.g., Europe)}
+  \item{\code{colour}}{Assigned colour by continen (e.g., '#d1a1bc')}
 }
 }
 \source{
-Open Trade Statistics
+Derived from USITC
 }
 \usage{
 ots_countries
