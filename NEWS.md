@@ -1,3 +1,8 @@
+# version 7.1
+
+* Reduced country list to those ISO codes in ITPD-E/S. This is because DGD
+  covers many more years and the trade data does not cover codes before 1986.
+
 # version 7.0
 
 * Uses USITC data. This adds breaking changes as the API had to be fully changes.
