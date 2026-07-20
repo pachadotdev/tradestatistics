@@ -60,11 +60,6 @@
     "region_colour": "#d1a1bc"
   },
   {
-    "iso3_dynamic": "DHY",
-    "region_id": 2,
-    "region_colour": "#d1a1bc"
-  },
-  {
     "iso3_dynamic": "DJI",
     "region_id": 2,
     "region_colour": "#d1a1bc"
@@ -126,11 +121,6 @@
   },
   {
     "iso3_dynamic": "GNQ",
-    "region_id": 2,
-    "region_colour": "#d1a1bc"
-  },
-  {
-    "iso3_dynamic": "HVO",
     "region_id": 2,
     "region_colour": "#d1a1bc"
   },
@@ -215,11 +205,6 @@
     "region_colour": "#d1a1bc"
   },
   {
-    "iso3_dynamic": "RHO",
-    "region_id": 2,
-    "region_colour": "#d1a1bc"
-  },
-  {
     "iso3_dynamic": "RWA",
     "region_id": 2,
     "region_colour": "#d1a1bc"
@@ -275,11 +260,6 @@
     "region_colour": "#d1a1bc"
   },
   {
-    "iso3_dynamic": "TAN",
-    "region_id": 2,
-    "region_colour": "#d1a1bc"
-  },
-  {
     "iso3_dynamic": "TCD",
     "region_id": 2,
     "region_colour": "#d1a1bc"
@@ -325,16 +305,6 @@
     "region_colour": "#d1a1bc"
   },
   {
-    "iso3_dynamic": "ZPM",
-    "region_id": 2,
-    "region_colour": "#d1a1bc"
-  },
-  {
-    "iso3_dynamic": "ZW1",
-    "region_id": 2,
-    "region_colour": "#d1a1bc"
-  },
-  {
     "iso3_dynamic": "ZWE",
     "region_id": 2,
     "region_colour": "#d1a1bc"
@@ -346,11 +316,6 @@
   },
   {
     "iso3_dynamic": "AIA",
-    "region_id": 3,
-    "region_colour": "#a1aafb"
-  },
-  {
-    "iso3_dynamic": "ANT",
     "region_id": 3,
     "region_colour": "#a1aafb"
   },
@@ -420,11 +385,6 @@
     "region_colour": "#a1aafb"
   },
   {
-    "iso3_dynamic": "GLP.X",
-    "region_id": 3,
-    "region_colour": "#a1aafb"
-  },
-  {
     "iso3_dynamic": "GRD",
     "region_id": 3,
     "region_colour": "#a1aafb"
@@ -440,22 +400,12 @@
     "region_colour": "#a1aafb"
   },
   {
-    "iso3_dynamic": "KN1",
-    "region_id": 3,
-    "region_colour": "#a1aafb"
-  },
-  {
     "iso3_dynamic": "KNA",
     "region_id": 3,
     "region_colour": "#a1aafb"
   },
   {
     "iso3_dynamic": "LCA",
-    "region_id": 3,
-    "region_colour": "#a1aafb"
-  },
-  {
-    "iso3_dynamic": "MAF",
     "region_id": 3,
     "region_colour": "#a1aafb"
   },
@@ -530,17 +480,7 @@
     "region_colour": "#a1aafb"
   },
   {
-    "iso3_dynamic": "PAN",
-    "region_id": 4,
-    "region_colour": "#a1aafb"
-  },
-  {
     "iso3_dynamic": "PAN.X",
-    "region_id": 4,
-    "region_colour": "#a1aafb"
-  },
-  {
-    "iso3_dynamic": "PCZ",
     "region_id": 4,
     "region_colour": "#a1aafb"
   },
@@ -630,374 +570,294 @@
     "region_colour": "#a8c380"
   },
   {
-    "iso3_dynamic": "ALA",
-    "region_id": 8,
-    "region_colour": "#ede788"
-  },
-  {
     "iso3_dynamic": "ALB",
     "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "AND",
     "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "ARM",
     "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "AUT",
     "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "AZE",
     "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "BEL",
     "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "BGR",
     "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "BIH",
     "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "BLR",
     "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "BLX",
     "region_id": 8,
-    "region_colour": "#ede788"
-  },
-  {
-    "iso3_dynamic": "BYS",
-    "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "CHE",
     "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "CSK",
     "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "CYP",
     "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "CZE",
     "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "DDR",
     "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "DEU",
     "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "DEU.X",
     "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "DNK",
     "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "ESP",
     "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "EST",
     "region_id": 8,
-    "region_colour": "#ede788"
-  },
-  {
-    "iso3_dynamic": "EU10",
-    "region_id": 8,
-    "region_colour": "#ede788"
-  },
-  {
-    "iso3_dynamic": "EU12",
-    "region_id": 8,
-    "region_colour": "#ede788"
-  },
-  {
-    "iso3_dynamic": "EU12.X",
-    "region_id": 8,
-    "region_colour": "#ede788"
-  },
-  {
-    "iso3_dynamic": "EU15",
-    "region_id": 8,
-    "region_colour": "#ede788"
-  },
-  {
-    "iso3_dynamic": "EU25",
-    "region_id": 8,
-    "region_colour": "#ede788"
-  },
-  {
-    "iso3_dynamic": "EU27",
-    "region_id": 8,
-    "region_colour": "#ede788"
-  },
-  {
-    "iso3_dynamic": "EU28",
-    "region_id": 8,
-    "region_colour": "#ede788"
-  },
-  {
-    "iso3_dynamic": "EU6",
-    "region_id": 8,
-    "region_colour": "#ede788"
-  },
-  {
-    "iso3_dynamic": "EU9",
-    "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "FIN",
     "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "FRA",
     "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "FRO",
     "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "GBR",
     "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "GEO",
     "region_id": 8,
-    "region_colour": "#ede788"
-  },
-  {
-    "iso3_dynamic": "GGY",
-    "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "GIB",
     "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "GRC",
     "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "HRV",
     "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "HUN",
     "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "IMN",
     "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "IRL",
     "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "ISL",
     "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "ITA",
     "region_id": 8,
-    "region_colour": "#ede788"
-  },
-  {
-    "iso3_dynamic": "JEY",
-    "region_id": 8,
-    "region_colour": "#ede788"
-  },
-  {
-    "iso3_dynamic": "KSV",
-    "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "LIE",
     "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "LTU",
     "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "LUX",
     "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "LVA",
     "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "MCO",
     "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "MDA",
     "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "MKD",
     "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "MLT",
     "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "MNE",
     "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "NLD",
     "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "NOR",
     "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "POL",
     "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "PRT",
     "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "ROM",
     "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "ROU",
     "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "SCG",
     "region_id": 8,
-    "region_colour": "#ede788"
-  },
-  {
-    "iso3_dynamic": "SJM",
-    "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "SMR",
     "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "SRB",
     "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "SRB.X",
     "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "SVK",
     "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "SVN",
     "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "SWE",
     "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "UKR",
     "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "VAT",
     "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "YUG",
     "region_id": 8,
-    "region_colour": "#ede788"
-  },
-  {
-    "iso3_dynamic": "YUG.X",
-    "region_id": 8,
-    "region_colour": "#ede788"
+    "region_colour": "#d05555"
   },
   {
     "iso3_dynamic": "AFG",
@@ -1160,22 +1020,7 @@
     "region_colour": "#a17cb0"
   },
   {
-    "iso3_dynamic": "GEL",
-    "region_id": 11,
-    "region_colour": "#a17cb0"
-  },
-  {
     "iso3_dynamic": "GUM",
-    "region_id": 11,
-    "region_colour": "#a17cb0"
-  },
-  {
-    "iso3_dynamic": "JTN",
-    "region_id": 11,
-    "region_colour": "#a17cb0"
-  },
-  {
-    "iso3_dynamic": "KIR",
     "region_id": 11,
     "region_colour": "#a17cb0"
   },
@@ -1186,11 +1031,6 @@
   },
   {
     "iso3_dynamic": "MHL",
-    "region_id": 11,
-    "region_colour": "#a17cb0"
-  },
-  {
-    "iso3_dynamic": "MID",
     "region_id": 11,
     "region_colour": "#a17cb0"
   },
@@ -1210,11 +1050,6 @@
     "region_colour": "#a17cb0"
   },
   {
-    "iso3_dynamic": "NHB",
-    "region_id": 11,
-    "region_colour": "#a17cb0"
-  },
-  {
     "iso3_dynamic": "NIU",
     "region_id": 11,
     "region_colour": "#a17cb0"
@@ -1230,11 +1065,6 @@
     "region_colour": "#a17cb0"
   },
   {
-    "iso3_dynamic": "PCI",
-    "region_id": 11,
-    "region_colour": "#a17cb0"
-  },
-  {
     "iso3_dynamic": "PCN",
     "region_id": 11,
     "region_colour": "#a17cb0"
@@ -1246,11 +1076,6 @@
   },
   {
     "iso3_dynamic": "PNG",
-    "region_id": 11,
-    "region_colour": "#a17cb0"
-  },
-  {
-    "iso3_dynamic": "PUS",
     "region_id": 11,
     "region_colour": "#a17cb0"
   },
@@ -1286,11 +1111,6 @@
   },
   {
     "iso3_dynamic": "VUT",
-    "region_id": 11,
-    "region_colour": "#a17cb0"
-  },
-  {
-    "iso3_dynamic": "WAK",
     "region_id": 11,
     "region_colour": "#a17cb0"
   },
@@ -1415,17 +1235,7 @@
     "region_colour": "#a8c380"
   },
   {
-    "iso3_dynamic": "PAK",
-    "region_id": 13,
-    "region_colour": "#a8c380"
-  },
-  {
     "iso3_dynamic": "PAK.X",
-    "region_id": 13,
-    "region_colour": "#a8c380"
-  },
-  {
-    "iso3_dynamic": "SKM",
     "region_id": 13,
     "region_colour": "#a8c380"
   },
@@ -1460,16 +1270,6 @@
     "region_colour": "#a8c380"
   },
   {
-    "iso3_dynamic": "MYS",
-    "region_id": 14,
-    "region_colour": "#a8c380"
-  },
-  {
-    "iso3_dynamic": "MYS.X",
-    "region_id": 14,
-    "region_colour": "#a8c380"
-  },
-  {
     "iso3_dynamic": "MYS.Y",
     "region_id": 14,
     "region_colour": "#a8c380"
@@ -1495,16 +1295,6 @@
     "region_colour": "#a8c380"
   },
   {
-    "iso3_dynamic": "VDR",
-    "region_id": 14,
-    "region_colour": "#a8c380"
-  },
-  {
-    "iso3_dynamic": "VNM",
-    "region_id": 14,
-    "region_colour": "#a8c380"
-  },
-  {
     "iso3_dynamic": "VNM.X",
     "region_id": 14,
     "region_colour": "#a8c380"
@@ -1516,11 +1306,6 @@
   },
   {
     "iso3_dynamic": "ATF",
-    "region_id": 15,
-    "region_colour": "#d3d3d3"
-  },
-  {
-    "iso3_dynamic": "BAT",
     "region_id": 15,
     "region_colour": "#d3d3d3"
   },

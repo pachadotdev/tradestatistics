@@ -5,11 +5,6 @@
     "dynamic_code": "AFG"
   },
   {
-    "country": "Aland Islands",
-    "iso3": "ALA",
-    "dynamic_code": "ALA"
-  },
-  {
     "country": "Albania",
     "iso3": "ALB",
     "dynamic_code": "ALB"
@@ -160,11 +155,6 @@
     "dynamic_code": "BVT"
   },
   {
-    "country": "Br. Antr. Terr",
-    "iso3": "BAT",
-    "dynamic_code": "BAT"
-  },
-  {
     "country": "Brazil",
     "iso3": "BRA",
     "dynamic_code": "BRA"
@@ -203,11 +193,6 @@
     "country": "Burundi",
     "iso3": "BDI",
     "dynamic_code": "BDI"
-  },
-  {
-    "country": "Byelorussian SSR",
-    "iso3": "BYS",
-    "dynamic_code": "BYS"
   },
   {
     "country": "Cambodia",
@@ -330,11 +315,6 @@
     "dynamic_code": "CSK"
   },
   {
-    "country": "Dahomey",
-    "iso3": "DHY",
-    "dynamic_code": "DHY"
-  },
-  {
     "country": "Denmark",
     "iso3": "DNK",
     "dynamic_code": "DNK"
@@ -400,51 +380,6 @@
     "dynamic_code": "ETF"
   },
   {
-    "country": "European Community",
-    "iso3": "EUN",
-    "dynamic_code": "EU6"
-  },
-  {
-    "country": "European Community",
-    "iso3": "EUN",
-    "dynamic_code": "EU9"
-  },
-  {
-    "country": "European Community",
-    "iso3": "EUN",
-    "dynamic_code": "EU12"
-  },
-  {
-    "country": "European Community",
-    "iso3": "EUN",
-    "dynamic_code": "EU10"
-  },
-  {
-    "country": "European Union",
-    "iso3": "EUN",
-    "dynamic_code": "EU12.X"
-  },
-  {
-    "country": "European Union",
-    "iso3": "EUN",
-    "dynamic_code": "EU15"
-  },
-  {
-    "country": "European Union",
-    "iso3": "EUN",
-    "dynamic_code": "EU25"
-  },
-  {
-    "country": "European Union",
-    "iso3": "EUN",
-    "dynamic_code": "EU27"
-  },
-  {
-    "country": "European Union",
-    "iso3": "EUN",
-    "dynamic_code": "EU28"
-  },
-  {
     "country": "Faeroe Islands",
     "iso3": "FRO",
     "dynamic_code": "FRO"
@@ -453,11 +388,6 @@
     "country": "Falkland Islands",
     "iso3": "FLK",
     "dynamic_code": "FLK"
-  },
-  {
-    "country": "Federation of Rhodesia and Nyasaland",
-    "iso3": "ZW1",
-    "dynamic_code": "ZW1"
   },
   {
     "country": "Fiji",
@@ -535,11 +465,6 @@
     "dynamic_code": "GIB"
   },
   {
-    "country": "Gilbert and Ellice Islands",
-    "iso3": "GEL",
-    "dynamic_code": "GEL"
-  },
-  {
     "country": "Greece",
     "iso3": "GRC",
     "dynamic_code": "GRC"
@@ -560,11 +485,6 @@
     "dynamic_code": "GLP"
   },
   {
-    "country": "Guadeloupe",
-    "iso3": "GLP",
-    "dynamic_code": "GLP.X"
-  },
-  {
     "country": "Guam",
     "iso3": "GUM",
     "dynamic_code": "GUM"
@@ -573,11 +493,6 @@
     "country": "Guatemala",
     "iso3": "GTM",
     "dynamic_code": "GTM"
-  },
-  {
-    "country": "Guernsey",
-    "iso3": "GGY",
-    "dynamic_code": "GGY"
   },
   {
     "country": "Guinea",
@@ -675,16 +590,6 @@
     "dynamic_code": "JPN"
   },
   {
-    "country": "Jersey",
-    "iso3": "JEY",
-    "dynamic_code": "JEY"
-  },
-  {
-    "country": "Johnston Island",
-    "iso3": "JTN",
-    "dynamic_code": "JTN"
-  },
-  {
     "country": "Jordan",
     "iso3": "JOR",
     "dynamic_code": "JOR"
@@ -702,11 +607,6 @@
   {
     "country": "Kiribati",
     "iso3": "KIR",
-    "dynamic_code": "KIR"
-  },
-  {
-    "country": "Kiribati",
-    "iso3": "KIR",
     "dynamic_code": "KIR.X"
   },
   {
@@ -718,11 +618,6 @@
     "country": "Korea, South",
     "iso3": "KOR",
     "dynamic_code": "KOR"
-  },
-  {
-    "country": "Kosovo",
-    "iso3": "KSV",
-    "dynamic_code": "KSV"
   },
   {
     "country": "Kuwait",
@@ -800,21 +695,6 @@
     "dynamic_code": "MWI"
   },
   {
-    "country": "Malaya",
-    "iso3": "MYS",
-    "dynamic_code": "MYS"
-  },
-  {
-    "country": "Malaysia",
-    "iso3": "MYS",
-    "dynamic_code": "MYS.X"
-  },
-  {
-    "country": "Malaysia",
-    "iso3": "MYS",
-    "dynamic_code": "MYS.Y"
-  },
-  {
     "country": "Maldives",
     "iso3": "MDV",
     "dynamic_code": "MDV"
@@ -863,11 +743,6 @@
     "country": "Micronesia, Federated States of ",
     "iso3": "FSM",
     "dynamic_code": "FSM"
-  },
-  {
-    "country": "Midway Islands",
-    "iso3": "MID",
-    "dynamic_code": "MID"
   },
   {
     "country": "Moldova",
@@ -937,11 +812,6 @@
   {
     "country": "Netherlands Antilles",
     "iso3": "ANT",
-    "dynamic_code": "ANT"
-  },
-  {
-    "country": "Netherlands Antilles",
-    "iso3": "ANT",
     "dynamic_code": "ANT.X"
   },
   {
@@ -953,11 +823,6 @@
     "country": "New Caledonia",
     "iso3": "NCL",
     "dynamic_code": "NCL"
-  },
-  {
-    "country": "New Hebrides",
-    "iso3": "NHB",
-    "dynamic_code": "NHB"
   },
   {
     "country": "New Zealand",
@@ -990,11 +855,6 @@
     "dynamic_code": "NFK"
   },
   {
-    "country": "North Vietnam",
-    "iso3": "VDR",
-    "dynamic_code": "VDR"
-  },
-  {
     "country": "Northern Marianas",
     "iso3": "MNP",
     "dynamic_code": "MNP"
@@ -1003,16 +863,6 @@
     "country": "Norway",
     "iso3": "NOR",
     "dynamic_code": "NOR"
-  },
-  {
-    "country": "Pacific Islands Trust Territory",
-    "iso3": "PCI",
-    "dynamic_code": "PCI"
-  },
-  {
-    "country": "Pakistan",
-    "iso3": "PAK",
-    "dynamic_code": "PAK"
   },
   {
     "country": "Pakistan",
@@ -1032,17 +882,7 @@
   {
     "country": "Panama",
     "iso3": "PAN",
-    "dynamic_code": "PAN"
-  },
-  {
-    "country": "Panama",
-    "iso3": "PAN",
     "dynamic_code": "PAN.X"
-  },
-  {
-    "country": "Panama Canal Zone",
-    "iso3": "PCZ",
-    "dynamic_code": "PCZ"
   },
   {
     "country": "Papua New Guinea",
@@ -1095,16 +935,6 @@
     "dynamic_code": "REU"
   },
   {
-    "country": "Romania",
-    "iso3": "ROU",
-    "dynamic_code": "ROM"
-  },
-  {
-    "country": "Romania",
-    "iso3": "ROU",
-    "dynamic_code": "ROU"
-  },
-  {
     "country": "Russia",
     "iso3": "RUS",
     "dynamic_code": "RUS"
@@ -1118,11 +948,6 @@
     "country": "Saint Barthelemy",
     "iso3": "BLM",
     "dynamic_code": "BLM"
-  },
-  {
-    "country": "Saint Christopher-Nevis-Anguilla",
-    "iso3": "KN1",
-    "dynamic_code": "KN1"
   },
   {
     "country": "Saint Helena, Ascension, and Tristan da Cunha",
@@ -1150,11 +975,6 @@
     "dynamic_code": "VCT"
   },
   {
-    "country": "Saint-Martin",
-    "iso3": "MAF",
-    "dynamic_code": "MAF"
-  },
-  {
     "country": "Samoa",
     "iso3": "WSM",
     "dynamic_code": "WSM"
@@ -1175,11 +995,6 @@
     "dynamic_code": "SAU"
   },
   {
-    "country": "Saudi Arabia",
-    "iso3": "SAU",
-    "dynamic_code": "SAU.X"
-  },
-  {
     "country": "Senegal",
     "iso3": "SEN",
     "dynamic_code": "SEN"
@@ -1188,11 +1003,6 @@
     "country": "Serbia",
     "iso3": "SRB",
     "dynamic_code": "SRB"
-  },
-  {
-    "country": "Serbia",
-    "iso3": "SRB",
-    "dynamic_code": "SRB.X"
   },
   {
     "country": "Serbia and Montenegro",
@@ -1208,11 +1018,6 @@
     "country": "Sierra Leone",
     "iso3": "SLE",
     "dynamic_code": "SLE"
-  },
-  {
-    "country": "Sikkim",
-    "iso3": "SKM",
-    "dynamic_code": "SKM"
   },
   {
     "country": "Singapore",
@@ -1250,11 +1055,6 @@
     "dynamic_code": "ZAF"
   },
   {
-    "country": "South Africa",
-    "iso3": "ZAF",
-    "dynamic_code": "ZAF.X"
-  },
-  {
     "country": "South Georgia and South Sandwich Islands",
     "iso3": "SGS",
     "dynamic_code": "SGS"
@@ -1263,11 +1063,6 @@
     "country": "South Sudan",
     "iso3": "SSD",
     "dynamic_code": "SSD"
-  },
-  {
-    "country": "South Vietnam",
-    "iso3": "VNM",
-    "dynamic_code": "VNM"
   },
   {
     "country": "Soviet Union",
@@ -1290,19 +1085,9 @@
     "dynamic_code": "SDN"
   },
   {
-    "country": "Sudan",
-    "iso3": "SDN",
-    "dynamic_code": "SDN.X"
-  },
-  {
     "country": "Suriname",
     "iso3": "SUR",
     "dynamic_code": "SUR"
-  },
-  {
-    "country": "Svalbard and Jan Mayen Islands",
-    "iso3": "SJM",
-    "dynamic_code": "SJM"
   },
   {
     "country": "Swaziland",
@@ -1333,11 +1118,6 @@
     "country": "Tajikistan",
     "iso3": "TJK",
     "dynamic_code": "TJK"
-  },
-  {
-    "country": "Tanganyika",
-    "iso3": "TAN",
-    "dynamic_code": "TAN"
   },
   {
     "country": "Tanzania",
@@ -1400,11 +1180,6 @@
     "dynamic_code": "UMI"
   },
   {
-    "country": "U.S. Miscellaneous Pacific Islands",
-    "iso3": "PUS",
-    "dynamic_code": "PUS"
-  },
-  {
     "country": "U.S. Virgin Islands",
     "iso3": "VIR",
     "dynamic_code": "VIR"
@@ -1435,11 +1210,6 @@
     "dynamic_code": "USA"
   },
   {
-    "country": "Upper Volta",
-    "iso3": "HVO",
-    "dynamic_code": "HVO"
-  },
-  {
     "country": "Uruguay",
     "iso3": "URY",
     "dynamic_code": "URY"
@@ -1468,11 +1238,6 @@
     "country": "Vietnam",
     "iso3": "VNM",
     "dynamic_code": "VNM.X"
-  },
-  {
-    "country": "Wake Island",
-    "iso3": "WAK",
-    "dynamic_code": "WAK"
   },
   {
     "country": "Wallis and Futuna Islands",
@@ -1510,11 +1275,6 @@
     "dynamic_code": "YUG"
   },
   {
-    "country": "Yugoslavia",
-    "iso3": "YUG",
-    "dynamic_code": "YUG.X"
-  },
-  {
     "country": "Zaire",
     "iso3": "COD",
     "dynamic_code": "ZAR"
@@ -1525,18 +1285,43 @@
     "dynamic_code": "ZMB"
   },
   {
-    "country": "Zanzibar",
-    "iso3": "ZPM",
-    "dynamic_code": "ZPM"
-  },
-  {
     "country": "Zimbabwe",
     "iso3": "ZWE",
     "dynamic_code": "ZWE"
   },
   {
-    "country": "Zimbabwe-Rhodesia",
-    "iso3": "RHO",
-    "dynamic_code": "RHO"
+    "country": "Romania (ISO 3-alpha ROM, pre-2002)",
+    "iso3": "ROU",
+    "dynamic_code": "ROM"
+  },
+  {
+    "country": "Romania (ISO 3-alpha ROU, 2002+)",
+    "iso3": "ROU",
+    "dynamic_code": "ROU"
+  },
+  {
+    "country": "Saudi Arabia (after Neutral Zone discontinued)",
+    "iso3": "SAU",
+    "dynamic_code": "SAU.X"
+  },
+  {
+    "country": "Sudan (after South Sudan independence)",
+    "iso3": "SDN",
+    "dynamic_code": "SDN.X"
+  },
+  {
+    "country": "Serbia (after Kosovo split)",
+    "iso3": "SRB",
+    "dynamic_code": "SRB.X"
+  },
+  {
+    "country": "South Africa (after Namibia independence)",
+    "iso3": "ZAF",
+    "dynamic_code": "ZAF.X"
+  },
+  {
+    "country": "Malaysia",
+    "iso3": "MYS",
+    "dynamic_code": "MYS.X"
   }
 ]
