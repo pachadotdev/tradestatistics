@@ -129,7 +129,8 @@ ots_create_tidy_data_unmemoised <- function(years = 2018,
   )
 
   if (!is.null(importers)) {
-    if (!all(importers %in% tradestatistics::ots_countries$dynamic_code) == TRUE && table %in% importer_depending_queries) {
+    if (!(length(importers) == 1 && identical(importers, "ALL")) &&
+        !all(importers %in% tradestatistics::ots_countries$dynamic_code) == TRUE && table %in% importer_depending_queries) {
       importers_iso <- importers[importers %in% tradestatistics::ots_countries$dynamic_code]
       importers_no_iso <- importers[!importers %in% tradestatistics::ots_countries$dynamic_code]
 
@@ -146,6 +147,8 @@ ots_create_tidy_data_unmemoised <- function(years = 2018,
           }
 
           if (length(y) > 1) {
+            # print("----")
+            # print(y)
             stop("There are multiple matches for the importers you requested. Please check ots_countries.")
           } else {
             return(y)
@@ -160,6 +163,7 @@ ots_create_tidy_data_unmemoised <- function(years = 2018,
 
   if (!is.null(exporters)) {
     if (
+      !(length(exporters) == 1 && identical(exporters, "ALL")) &&
       isTRUE(!all(exporters %in% tradestatistics::ots_countries$dynamic_code)) &&
       table %in% exporter_depending_queries
     ) {
